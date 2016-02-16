@@ -28,12 +28,19 @@ As a user, I want to choose the toppings on my order so I can have a personalize
 As a provider, I want to be able to view order status so I can track if orders have been started and finished. |
 As a user, I want to see the estimated time on my order so I don't have to wait for my order |
 As a provider, I want to be able to see if a user hasn't picked up an order before so we can warn/blacklist them. |
+As a user, I want to be able to choose my previous order so I can quickly place my order. |
 
-Functional | ID Number | Sizing - Agile/Time | Priority | Topic | User Type
+Functional Requirements | ID Number | Sizing - Agile/Time | Priority | Topic | User Type
 ---------- | --------- | ------------------- | -------- | ----- | ---------
+As a function of the application, I want to prompt user for student identification so I can verify user is a student and link user to order. |
+As a function of the application, I want to display order choices and time estimation for order pick up so I can provide accurate order details. |
 
-Non-Funcational | ID Number | Sizing - Agile/Time | Priority | Topic | User Type
+
+
+Non-Functional Requirements | ID Number | Sizing - Agile/Time | Priority | Topic | User Type
 --------------- | --------- | ------------------- | -------- | ----- | ---------
+As a part of the application, I want a large amount of storage so I can facilitate multiple users. |
+As a part of the application, I want stability so I can provide a reliable service. |
 
 * __Reduce stories to ~1 day in agile/8 hours of work?__
 
