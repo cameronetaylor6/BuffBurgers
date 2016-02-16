@@ -22,6 +22,7 @@ http://www.lousymedia.com/csci-3308/assignments/team-project
 * Mitigation strategy for dealing with the risk
   * We may be able to set up an email verification system using @colorado.edu emails.
   * We are going to spend a lot of time planning.
+  * We can use each other as resources, but we can also seek out additional assistance if we get stuck learning something new.
 
 ### Requirements
 
