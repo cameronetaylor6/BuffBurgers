@@ -53,11 +53,11 @@
 			<div class="col-md-4 col-md-offset-4">
 					<h1>BuffBurgers</h1>
 					
-		<! -------------- Start of Form ------------------>
-				<div class="form-group">
-					<label for="Order">Farand Burger Order</label>
-					<input type="text" class="form-control" id="ID" placeholder="Enter Your CU ID" </input>
-				</div>					
+					<! -------------- Start of Form ------------------>
+					<div class="form-group">
+						<label for="Order">Farand Burger Order</label>
+						<input type="text" class="form-control" id="ID" placeholder="Enter Your CU ID" </input>
+					</div>					
 			</div>
 			<div class="col-md-4 col-md-offset-4">
 				<div class="form-group">
@@ -71,13 +71,68 @@
 			</div>
 			</form>
 			<div class="col-md-6 col-md-offset-4">
-				<label>Type of Burger<label>
+				<label for="burger">Type of Burger<label>
 				<div class="checkbox-inline">
-					<input type = "checkbox" value="">Veggetarian</input>
+					<input type="checkbox" value="">Veggie Burger</input>
 				</div>
 				<div class="checkbox-inline">
-					<input type="checkbox" value="">Meat</input>
+					<input type="checkbox" value="">Hamburger</input>
 				</div>
+				<div class="checkbox-inline">
+					<input type="checkbox" value="">Daily Special</input>
+				</div>
+			</div>
+			<div class="col-md-3 col-md-offset-4">
+				<div class = "form-group">
+				<label for="temp">How Would You Like Your Burger Cooked?<label>
+ 				 <select class="form-control" id="sel1">
+    				<option>155</option>
+   					<option>160</option>
+    				<option>165</option>
+   					<option>170</option>
+   					<option>175</option>
+ 				 </select>
+ 				</div>
+			</div>
+			<div class="col-md-6 col-md-offset-4">
+				<label for="cheese">Cheese?<label>
+				<div class="checkbox-inline">
+					<input type = "checkbox" value="">Chedder</input>
+				</div>
+				<div class="checkbox-inline">
+					<input type="checkbox" value="">Provolone</input>
+				</div>
+				<div class="checkbox-inline">
+					<input type="checkbox" value="">Swiss</input>
+				</div>
+				<div class="checkbox-inline">
+					<input type="checkbox" value="">Pepper Jack</input>
+				</div>
+			</div>
+			<div class="col-md-6 col-md-offset-4">
+				<label for="toppings">Toppings?<label>
+				<div class="checkbox-inline">
+					<input type="checkbox" value="">Lettuce</input>
+				</div>
+				<div class="checkbox-inline">
+					<input type="checkbox" value="">Tomato</input>
+				</div>
+				<div class="checkbox-inline">
+					<input type="checkbox" value="">Onion</input>
+				</div>
+				<div class="checkbox-inline">
+					<input type="checkbox" value="">Pickles</input>
+				</div>
+			</div>
+			<div class="col-md-3 col-md-offset-4">
+				<div class = "form-group">
+				<label for="bun">Type of Bun?<label>
+ 				 <select class="form-control" id="sel1">
+    				<option>Regular Bun</option>
+   					<option>Lettuce Wrap</option>
+    				<option>Gluten Free Bun</option>
+ 				 </select>
+ 				</div>
 			</div>
 			<div class = "col-md-6 col-md-offset-4">
 				<button type="submit" class="btn btn-default" onclick="alert();">Submit</button>
