@@ -26,8 +26,8 @@ http://www.lousymedia.com/csci-3308/assignments/team-project
 
 ### Requirements
 
-User Requirements | ID Number | Sizing - Agile/Time
------------------ | --------- | -------------------
+User Requirements | ID Number | Sizing - Agile/Time | Priority | Topic | User Type
+----------------- | --------- | ------------------- | -------- | ----- | ---------
 As a user, I want to be able to choose from the same burger customization options, so that I can get the same burger as if I ordered it in-person. | 1 | 3 | 
 As a user, I want to be able to see Farrand's business hours, so that I can see when I can place an order. | 2 | 1 |
 As a user, I want to be able to login and view my recent order history so that I can quickly place an order again. | 3 | 7 |
@@ -37,8 +37,8 @@ As a provider, I want to be able to see if a user hasn't picked up an order befo
 As a provider, I want to be able to remove the afformentioned flag so that I can return a customer to goodstanding when they resolve their issue. | 7 | 3
 As a provider, I want to be able to view all pending orders and sort by most recent so that I can make orders as they come in. | 8 | 7
 
-Functional Requirements | ID Number | Sizing - Agile/Time
------------------------ | --------- | -------------------
+Functional Requirements | ID Number | Sizing - Agile/Time | Priority | Topic | User Type
+----------------------- | --------- | ------------------- | -------- | ----- | ---------
 As a function of the application, I want to require that all users verify their @colorado.edu email addresses so that only CU students/faculty can access the ordering system. | 9 | 4 | 
 As a function of the application, I want to be able to retrieve forgotten passwords so that users/providers can regain access to their accounts. | 10 | 4 |
 As a function of the application, I want to display order choices and time estimation for order pick up so I can provide accurate order details. | 11 | 3 |
@@ -46,17 +46,16 @@ As a function of the application, I want to send a notification to each user whe
 As a function of the application, I want to prevent customers from ordering a burger when Farrand is closed so that any subsequent orders aren't thrown off by invalid ones. | 13 | 4 |
 As a function of the application, I want to show Farrand's business hours to users who try to order a burger after-hours so that I can see when they are open. | 14 | 1
 
-Non-Functional Requirements | ID Number | Sizing - Agile/Time
---------------------------- | --------- | -------------------
+Non-Functional Requirements | ID Number | Sizing - Agile/Time | Priority | Topic | User Type
+--------------------------- | --------- | ------------------- | -------- | ----- | ---------
 As a part of the application, I want a large amount of storage so I can facilitate multiple users. | 15 | 3 |
 As a part of the application, I want to ensure that adding to and querying the database is be 100% reliable so that orders are not lost. | 16 | 4 |
 
 #### Methodology & Plan
-* Methodology: (Mostly) Agile?
+* Methodology: Agile
   * Project Tracking software: Trello
-  * Link to project tracking software: https://trello.com/csci3308project2, https://trello.com/b/Hv5gd8gu
-  * __(re)make trello board so it's public and they can access__
-  * __make sure instructor and TAs have access to Trello and GitHub__
+  * Link to project tracking software: https://trello.com/csci3308project2, https://trello.com/b/p70XVe6b
+  * __ADD PEOPLE TO TRELLO PROJECTS__
 * Project plan: __copy paste picture from trello__ ![Image of Project Plan](https://octodex.github.com/images/linktocat.jpg)
 
 ### Links to possible logistic problems/solutions
