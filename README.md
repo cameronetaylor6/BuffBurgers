@@ -55,7 +55,8 @@ As a part of the application, I want to ensure that adding to and querying the d
 * Methodology: Agile
   * Project Tracking software: Trello
   * Link to project tracking software: https://trello.com/csci3308project2, https://trello.com/b/p70XVe6b
-* Project plan:[Image of Project Plan](http://s7.postimg.org/h7gdyqktn/trello.png)
+* [Image of Project Plan](http://s7.postimg.org/h7gdyqktn/trello.png)
+
 ### Links to possible logistic problems/solutions
 * http://www.colorado.edu/avcit/incommon
 * http://www.colorado.edu/oit/services/identity-access-management/federated-identity/help/guidelines
