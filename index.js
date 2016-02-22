@@ -1,3 +1,15 @@
+/*
+You need to install a few things before this will run.
+sudo apt-get install nodejs
+sudo apt-get install npm
+npm install
+npm install mysql
+npm install express
+
+Then you can run this with
+nodejs index.js
+
+*/
 var mysql      = require('mysql');
 var express    = require("express");
 var connection = mysql.createConnection({
