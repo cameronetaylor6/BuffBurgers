@@ -1,49 +1,25 @@
 #create database buffburger;
 #use buffburger;
+#PRAGMA foreign_keys = ON;
 CREATE TABLE USERS(
   user_id INT PRIMARY KEY,
   password NCHAR NOT NULL,
   email NCHAR NOT NULL,
   verified INT NOT NULL CHECK(verified >= 0 and verified < 2),
-  jerk INT NOT NULL,
+  jerk INT NOT NULL CHECK(verified >= 0 and verified < 4),
 );
 
-#keep going dingus
-
-insert into `users` (`user_id`, `username`, `password`, `email`, `verified`, `jerk`) values
-  (0, 'cata5492', 'doggydog155', 'cata5492@colorado.edu', 0, 0),
-  (1, 'stco8901', 'kittykat266', 'stco8901@colorado.edu', 1, 0),
-  (2, 'arteezy', 'ti6', 'rtz@colorado.edu', 1, 1);
-
-create table if not exists `orders` (
-  `order_num` int(1) not null auto_increment,
-  `user_id` int(1) not null,
-  `provider_id` int(1) not null,
-  `status` int(1) not null check(status < 3 and status >= 0), # 0 - not started, 1 - processsing, 2 - finished
-  `burger` int(1) not null, # hamburger, veggie, daily
-  `heat` int(1) not null, # 155, 160, 165, 170, 175
-  `cheese` int(1) not null, # cheddar, provolone, swiss, pepper jack
-  `lettuce` int(1) not null,
-  `tomato` int(1) not null,
-  `onion` int(1) not null,
-  `pickle` int(1) not null,
-  `bun` int(1) not null, # regular, lettuce, gluten free
-  foreign key (user_id) references users(user_id),
-  foreign key (provider_id) references providers(provider_id),
-  primary key (`order_num`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=8;
-
-insert into `orders` (`order_num`, `user_id`, `provider_id`, `status`, `burger`, `heat`, `cheese`, `lettuce`, `tomato`, `onion`, `pickle`, `bun`) values
-  (1, 0, 1, 2, 0, 4, 0, 1, 1, 1, 1, 0),
-  (2, 1, 1, 0, 2, 0, 1, 0, 0, 1, 1, 2),
-  (3, 1, 1, 1, 1, 2, 3, 1, 1, 0, 1, 0),
-  (4, 2, 1, 2, 0, 1, 2, 1, 0, 1, 0, 1);
-
-create table if not exists `providers` (
-  `provider_id` int(1) not null auto_increment,
-  `name` varchar(25) not null,
-  primary key (`provider_id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=5;
-
-insert into `providers` (`provider_id`, `name`) values
-  (1, 'Farrand');
+CREATE TABLE orders (
+  order_num INT PRIMARY KEY,
+  user_id INT not null,
+  status INT not null CHECK(status >= 0 and status < 3), # 0 - not started, 1 - processsing, 2 - finished
+  burger INT not null CHECK(verified >= 0 and verified < 3), # hamburger, veggie, daily
+  heat INT not null CHECK(verified >= 0 and verified < 5), # 155, 160, 165, 170, 175
+  cheese INT not null CHECK(verified >= 0 and verified < 4), # cheddar, provolone, swiss, pepper jack
+  lettuce INT not null CHECK(verified >= 0 and verified < 2),
+  tomato INT not null CHECK(verified >= 0 and verified < 2),
+  onion INT not null CHECK(verified >= 0 and verified < 2),
+  pickle INT not null CHECK(verified >= 0 and verified < 2),
+  bun INT not null CHECK(verified >= 0 and verified < 3), # regular, lettuce, gluten free
+  FOREIGN KEY (user_id) REFERENCES users(user_id),
+);
