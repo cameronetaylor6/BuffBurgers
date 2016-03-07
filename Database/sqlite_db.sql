@@ -1,9 +1,13 @@
+DROP TABLE users;
+DROP TABLE orders;
+
 PRAGMA foreign_keys = ON;
 
 CREATE TABLE users(
   user_id INTEGER PRIMARY KEY,
   email NCHAR NOT NULL,
   password NCHAR NOT NULL,
+  provider INTEGER NOT NULL CHECK(provider >= 0 and provider < 2),
   verified INTEGER NOT NULL CHECK(verified >= 0 and verified < 2),
   jerk INTEGER NOT NULL CHECK(jerk >= 0 and jerk < 4)
 );
