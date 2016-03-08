@@ -1,78 +1,50 @@
 <!doctype html>
 <html lang="en">
+<head>
 <script type="text/javascript">
 	function alert(){
 		confirm("Your order was submited!");
 	}
 </script>
-<html>
-	<head>
 	
-		<! -------------------------- Bootstrap ---------------------------->
+		<!-- Bootstrap -->	
 		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 		
-		<! ---------------------------- CSS ---------------------------->
-			<style type = "text/css">
-				body {font-family:Arial, Sans-Serif;}
-				#container {width:100%; margin:0 auto;}
-				form label{display:inline-block; 
-					width:100%;
+		<!-- CSS -->
+		<link rel="stylesheet" type="text/css" href="css/style.css">
 
-				}
-				label, input {
-   					 display: block;
-				}
-
-				label {
-  					  margin-bottom: 20px;
-				}
-				h1{
-					text-align: center;
-
-				}
-				.btn-default {
-					background: #fff;
-					color: #000;
-				}
-				.btn-default:hover {
-					background: #000;
-					color: #fff;
-				}
-
-				
-			</style>
-	</head>
+</head>
 	
 <body>	
 		
 		
-		<!----------------------------- Form Collum ------------------------------>
+		<!-- Form Collum -->
 		<div class="container">
-			<form class="form-horizontal" role="form">
+			<form class="form-horizontal" role="form" action="#">
 			<div class="col-md-4 col-md-offset-4">
 					<h1>BuffBurgers</h1>
 					
-					<! -------------- Start of Form ------------------>
+					<!-- Start of Form -->
 					<div class="form-group">
 						<label for="Order">Farand Burger Order</label>
-						<input type="text" class="form-control" id="ID" placeholder="Enter Your CU ID" </input>
+						<input type="text" class="form-control" id="ID" placeholder="Enter Your CU ID">
 					</div>					
 			</div>
 			<div class="col-md-4 col-md-offset-4">
 				<div class="form-group">
-					<input type="text" class="form-control" id="first_name" placeholder="Enter Your First Name" </input>
+					<input type="text" class="form-control" id="first_name" placeholder="Enter Your First Name">
 				</div>
 			</div>
 			<div class="col-md-4 col-md-offset-4">
 				<div class="form-group">
-					<input type="text" class="form-control" id="last_name" placeholder="Enter Your Last Name" </input>
+					<input type="text" class="form-control" id="last_name" placeholder="Enter Your Last Name">
 				</div>
 			</div>
 			</form>
 			<div class="col-md-3 col-md-offset-4">
 				<div class = "form-group">
-				<label for="burger_type">Type Of Burger?<label>
+				<label for="burger_type">Type Of Burger?</label>
  				 <select class="form-control" id="burger">
     				<option>Hamburger</option>
    					<option>Veggie Burger</option>
@@ -82,7 +54,7 @@
 			</div>
 			<div class="col-md-3 col-md-offset-4">
 				<div class = "form-group">
-				<label for="temperature">How Would You Like Your Burger Cooked?<label>
+				<label for="temperature">How Would You Like Your Burger Cooked?</label>
  				 <select class="form-control" id="temp">
     				<option>155</option>
    					<option>160</option>
@@ -92,39 +64,39 @@
  				 </select>
  				</div>
 			</div>
-			<div class="col-md-6 col-md-offset-4">
-				<label for="cheese">Cheese?<label>
+			<div class="col-md-6 col-md-offset-4 form-group">
+				<label for="cheese">Cheese?</label>
 				<div class="checkbox-inline">
-					<input type = "checkbox" value="">Chedder</input>
+					<input type = "checkbox" value="">Chedder
 				</div>
 				<div class="checkbox-inline">
-					<input type="checkbox" value="">Provolone</input>
+					<input type="checkbox" value="">Provolone
 				</div>
 				<div class="checkbox-inline">
-					<input type="checkbox" value="">Swiss</input>
+					<input type="checkbox" value="">Swiss
 				</div>
 				<div class="checkbox-inline">
-					<input type="checkbox" value="">Pepper Jack</input>
-				</div>
-			</div>
-			<div class="col-md-6 col-md-offset-4">
-				<label for="toppings">Toppings?<label>
-				<div class="checkbox-inline">
-					<input type="checkbox" value="">Lettuce</input>
-				</div>
-				<div class="checkbox-inline">
-					<input type="checkbox" value="">Tomato</input>
-				</div>
-				<div class="checkbox-inline">
-					<input type="checkbox" value="">Onion</input>
-				</div>
-				<div class="checkbox-inline">
-					<input type="checkbox" value="">Pickles</input>
+					<input type="checkbox" value="">Pepper Jack
 				</div>
 			</div>
-			<div class="col-md-3 col-md-offset-4">
+			<div class="col-md-6 col-md-offset-4 form-group">
+				<label for="toppings">Toppings?</label>
+				<div class="checkbox-inline">
+					<input type="checkbox" value="">Lettuce
+				</div>
+				<div class="checkbox-inline">
+					<input type="checkbox" value="">Tomato
+				</div>
+				<div class="checkbox-inline">
+					<input type="checkbox" value="">Onion
+				</div>
+				<div class="checkbox-inline">
+					<input type="checkbox" value="">Pickles
+				</div>
+			</div>
+			<div class="col-md-3 col-md-offset-4 form-group">
 				<div class = "form-group">
-				<label for="bun_type">Type of Bun?<label>
+				<label for="bun_type">Type of Bun?</label>
  				 <select class="form-control" id="bun">
     				<option>Regular Bun</option>
    					<option>Lettuce Wrap</option>
