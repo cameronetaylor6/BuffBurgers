@@ -1,11 +1,6 @@
 <!doctype html>
 <html lang="en">
 <head>
-<script type="text/javascript">
-	function alert(){
-		confirm("Your order was submited!");
-	}
-</script>
 	
 		<!-- Bootstrap -->	
 		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
@@ -13,12 +8,22 @@
 		
 		<!-- CSS -->
 		<link rel="stylesheet" type="text/css" href="css/style.css">
+		
+		<!--Sweet Alert-->
+		<script src="node_modules/sweetalert/dist/sweetalert.min.js"></script>
 
+		<link rel="stylesheet" href="node_modules/sweetalert/dist/sweetalert.css">
+
+		<!--Jquery-->
+		<script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
 </head>
 	
 <body>	
-		
-		
+<script>
+	function alert(){
+		swal("Success!", "Your order was placed", "success")
+	}
+</script>
 		<!-- Form Collum -->
 		<div class="container">
 			<form class="form-horizontal" role="form" action="#">
