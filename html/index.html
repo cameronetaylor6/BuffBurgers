@@ -10,7 +10,7 @@
 		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 		
 		<!-- CSS -->
-		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<link rel="stylesheet" type="text/css" href="/css/style.css">
 		
 		<!--Sweet Alert-->
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"></script>
@@ -22,7 +22,26 @@
 <body>	
 <script>
 	function alert(){
-		swal("Success!", "Your order was placed", "success")
+					var order = {
+					firstName: document.getElementById('first_name').value,
+					lastName: document.getElementById('last_name').value,
+					cuID: document.getElementById('ID').value,
+					burger: document.getElementById('burger').value,
+					temperature: document.getElementById('temp').value
+					}
+					//calls USD Bitcoin value from backend.
+					$.ajax({
+					url:'/place',
+					type:'POST',
+					data: order,
+					dataTpye: 'JSON',
+					success: function(){
+									console.log("ajax works");
+					},
+					error: function(){
+								console.log("ajax failed");
+					} 
+				}); swal("Success!", "Your order was placed", "success")
 	}
 </script>
 		<!-- Form Collum -->
@@ -34,7 +53,7 @@
 					<!-- Start of Form -->
 					<div class="form-group">
 						<label for="Order">Farand Burger Order</label>
-						<input type="text" class="form-control" id="ID" placeholder="Enter Your CU ID">
+						<input type="text" class="form-control" id="ID" placeholder="Enter Your Last 5 Digits of our CU ID">
 					</div>					
 			</div>
 			<div class="col-md-4 col-md-offset-4">
