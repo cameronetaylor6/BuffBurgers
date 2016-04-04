@@ -32,11 +32,6 @@ class OrderVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
     @IBOutlet weak var Tcheck: UIButton!
     @IBOutlet weak var Ocheck: UIButton!
     @IBOutlet weak var Pcheck: UIButton!
-
-
-    
-    
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,12 +46,12 @@ class OrderVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
         Bun.dataSource = self
         Lcheck.setTitle("◻️", forState: UIControlState.Normal)
         Tcheck.setTitle("◻️", forState: UIControlState.Normal)
-        //Ocheck.setTitle("◻️", forState: UIControlState.Normal)
-        //Pcheck.setTitle("◻️", forState: UIControlState.Normal)
+        Ocheck.setTitle("◻️", forState: UIControlState.Normal)
+        Pcheck.setTitle("◻️", forState: UIControlState.Normal)
     }
     
     override func viewWillAppear(animated: Bool) {
-        //Lcheck.setTitle("◻️", forState: UIControlState.Normal)
+        //Lcheck.setTitle("✅", forState: UIControlState.Selected)
         //Tcheck.setTitle("◻️", forState: UIControlState.Normal)
         Ocheck.setTitle("◻️", forState: UIControlState.Normal)
         Pcheck.setTitle("◻️", forState: UIControlState.Normal)
@@ -92,18 +87,22 @@ class OrderVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
     func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         if (pickerView.tag == 1){
             userburger = "\(Burgerchoices[row])"
+            print("burger")
             return "\(Burgerchoices[row])"
         }
         if (pickerView.tag == 2){
             userburger = "\(Heatchoices[row])"
+            print("heat")
             return "\(Heatchoices[row])"
         }
         if (pickerView.tag == 3){
             userburger = "\(Cheesechoices[row])"
+            print("cheese")
             return "\(Cheesechoices[row])"
         }
         if (pickerView.tag == 4){
             userburger = "\(Bunchoices[row])"
+            print("bun")
             return "\(Bunchoices[row])"
         }
         else{
@@ -111,34 +110,66 @@ class OrderVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
         }
     }
     
+
      @IBAction func LettuceTapped(sender : UIButton){
-        Lcheck.setTitle("✅", forState: .Highlighted)
-        lettuce = 1
+        if Lcheck.currentTitle == "◻️" {
+            Lcheck.setTitle("✅", forState: .Normal)
+            lettuce = 1
+            print(lettuce)
+        }
+        else{
+        Lcheck.setTitle("◻️", forState: .Normal)
+        lettuce = 0
+            print("lettuce ", lettuce)
+        }
     }
     
     @IBAction func TomatoTapped(sender : UIButton){
-        Tcheck.setTitle("✅", forState: .Highlighted)
-        tomato = 1
+        if Tcheck.currentTitle == "◻️" {
+            Tcheck.setTitle("✅", forState: .Normal)
+            tomato = 1
+            print("tomato checked", tomato)
+        }
+        else{
+            Tcheck.setTitle("◻️", forState: .Normal)
+            tomato = 0
+            print("tomato unchecked", tomato)
+        }
     }
     
     @IBAction func OnionTapped(sender : UIButton){
-        Ocheck.setTitle("✅", forState: .Highlighted)
-        onion = 1
+        if Ocheck.currentTitle == "◻️" {
+            Ocheck.setTitle("✅", forState: .Normal)
+            onion = 1
+            print("onion checked", onion)
+        }
+        else{
+            Ocheck.setTitle("◻️", forState: .Normal)
+            onion = 0
+            print("onion unchecked", onion)
+        }
     }
     
     @IBAction func PickleTapped(sender : UIButton){
-        Pcheck.setTitle("✅", forState: .Highlighted)
-        pickle = 1
-        print("pickle: ", pickle)
+        if Pcheck.currentTitle == "◻️" {
+            Pcheck.setTitle("✅", forState: .Normal)
+            pickle = 1
+            print("pickle checked", pickle)
+        }
+        else{
+            Pcheck.setTitle("◻️", forState: .Normal)
+            pickle = 0
+            print("pickle unchecked", pickle)
+        }
     }
     
     @IBAction func PlaceOrderTapped(sender : UIButton){
         
-        //var ref = Firebase(url: "https://buffburgers.firebaseio.com")
-        //let orderRef = DataService.dataservice._refFirebase.childByAppendingPath("orders")
+        
         let order1 = ["burger": userburger, "heat": userheat, "cheese": usercheese, "bun": userbun, "lettuce": lettuce, "tomato": tomato, "onion": onion, "pickle": pickle]
-        let order1Ref = DataService.dataservice._refFirebase.childByAppendingPath("orders").childByAutoId()
-        order1Ref.setValue(order1)
+        print(order1)
+        //let order1Ref = DataService.dataservice._refFirebase.childByAppendingPath("orders").childByAutoId()
+        //order1Ref.setValue(order1)
         //do this so long as there was no error
         self.performSegueWithIdentifier("order_confirmed", sender: nil)
     }
