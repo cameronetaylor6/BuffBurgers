@@ -1,9 +1,6 @@
 //
 //  SignupVC.swift
-//  SwiftLoginScreen
-//
-//  Created by Dipin Krishna on 31/07/14.
-//  Copyright (c) 2014 Dipin Krishna. All rights reserved.
+//  BuffBurgers
 //
 
 import UIKit
@@ -53,13 +50,13 @@ class SignupVC: UIViewController, UITextFieldDelegate {
                         if error != nil{
                             print("there was an eror")
                             print(error)
+
+                            let alertController = UIAlertController(title: "Sign Up Failed!", message: "Account Already Exists", preferredStyle: .Alert)
+                            let OKAction = UIAlertAction(title: "OK", style: .Default) { (action) -> Void in }
+                            alertController.addAction(OKAction)
+                            self.presentViewController(alertController, animated: true, completion: nil)
                             
-                            let alertView:UIAlertView = UIAlertView()
-                            alertView.title = "Sign Up Failed!"
-                            alertView.message = "Account already exists"
-                            alertView.delegate = self
-                            alertView.addButtonWithTitle("OK")
-                            alertView.show()
+                            
                         }
                             
                         else {
@@ -68,6 +65,7 @@ class SignupVC: UIViewController, UITextFieldDelegate {
                                 
                                 let user = ["email": email]
                                 DataService.dataservice.createUser(result.uid, user: user)//
+                                self.performSegueWithIdentifier("signed_up", sender: nil)
                                 
                             })
                             print("success")
@@ -77,191 +75,37 @@ class SignupVC: UIViewController, UITextFieldDelegate {
                     })
                 }
                 else{
-                    
-                    let alertView:UIAlertView = UIAlertView()
-                    alertView.title = "Sign Up Failed!"
-                    alertView.message = "Please use a colorado email"
-                    alertView.delegate = self
-                    alertView.addButtonWithTitle("OK")
-                    alertView.show()
+                    let alertController = UIAlertController(title: "Sign in Failed!", message: "Please Use a Colorado Email", preferredStyle: .Alert)
+                    let OKAction = UIAlertAction(title: "OK", style: .Default) { (action) -> Void in }
+                    alertController.addAction(OKAction)
+                    self.presentViewController(alertController, animated: true, completion: nil)
                 }
             }
             else{
-                let alertView:UIAlertView = UIAlertView()
-                alertView.title = "Sign Up Failed!"
-                alertView.message = "Please renter your password"
-                alertView.delegate = self
-                alertView.addButtonWithTitle("OK")
-                alertView.show()
+                let alertController = UIAlertController(title: "Sign in Failed!", message: "Please Re-Enter Your Password", preferredStyle: .Alert)
+                let OKAction = UIAlertAction(title: "OK", style: .Default) { (action) -> Void in }
+                alertController.addAction(OKAction)
+                self.presentViewController(alertController, animated: true, completion: nil)
             }
             
         }
             
         else{
-            let alertView:UIAlertView = UIAlertView()
-            alertView.title = "Sign Up Failed!"
-            alertView.message = "Please enter Email and Password"
-            alertView.delegate = self
-            alertView.addButtonWithTitle("OK")
-            alertView.show()
+            let alertController = UIAlertController(title: "Sign in Failed!", message: "Please enter Email and Password", preferredStyle: .Alert)
+            let OKAction = UIAlertAction(title: "OK", style: .Default) { (action) -> Void in }
+            alertController.addAction(OKAction)
+            self.presentViewController(alertController, animated: true, completion: nil)
         }
         
     }
     
-    
-    
-    //print(username.isEmpty)
-    //print(password)
-    
-    //var users = [Users]()
-    //var users = [)
-    //username.isEmpty == false
-    
-    /*var user = [ "email":email, "password":password]
-     
-     
-     
-     
-     if email == "" && password == "" {
-     
-     let alertView:UIAlertView = UIAlertView()
-     alertView.title = "Sign Up Failed!"
-     alertView.message = "Please enter Username and Password"
-     alertView.delegate = self
-     alertView.addButtonWithTitle("OK")
-     alertView.show()
-     } else if ( !password.isEqual(confirm_password) ) {
-     
-     let alertView:UIAlertView = UIAlertView()
-     alertView.title = "Sign Up Failed!"
-     alertView.message = "Passwords doesn't Match"
-     alertView.delegate = self
-     alertView.addButtonWithTitle("OK")
-     alertView.show()
-     } else {
-     do {
-     
-     let firebaseUpdate = DataService.dataservice.refFb.childByAutoId()
-     firebaseUpdate.setValue(user)
-     
-     DataService.dataservice.refFb.createUser(email, password: password, withCompletionBlock:
-     {(error) in firebaseUpdate})*/
-    
-    /*let user:Dictionary<String, AnyObject> = [
-     "sample":"Hello"]*/
-    
-    
-    /*let post:NSString = "username=\(username)&password=\(password)&c_password=\(confirm_password)"
-     
-     NSLog("PostData: %@",post);
-     
-     let url:NSURL = NSURL(string: "")!
-     
-     let postData:NSData = post.dataUsingEncoding(NSASCIIStringEncoding)!
-     
-     let postLength:NSString = String( postData.length )
-     
-     let request:NSMutableURLRequest = NSMutableURLRequest(URL: url)
-     request.HTTPMethod = "POST"
-     request.HTTPBody = postData
-     request.setValue(postLength as String, forHTTPHeaderField: "Content-Length")
-     request.setValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
-     request.setValue("application/json", forHTTPHeaderField: "Accept")
-     
-     
-     var reponseError: NSError?
-     var response: NSURLResponse?
-     
-     var urlData: NSData?
-     do {
-     urlData = try NSURLConnection.sendSynchronousRequest(request, returningResponse:&response)
-     } catch let error as NSError {
-     reponseError = error
-     urlData = nil
-     }
-     
-     if ( urlData != nil ) {
-     let res = response as! NSHTTPURLResponse!;
-     
-     NSLog("Response code: %ld", res.statusCode);
-     
-     if (res.statusCode >= 200 && res.statusCode < 300)
-     {
-     let responseData:NSString  = NSString(data:urlData!, encoding:NSUTF8StringEncoding)!
-     
-     NSLog("Response ==> %@", responseData);
-     
-     //var error: NSError?
-     
-     let jsonData:NSDictionary = try NSJSONSerialization.JSONObjectWithData(urlData!, options:NSJSONReadingOptions.MutableContainers ) as! NSDictionary
-     
-     
-     let success:NSInteger = jsonData.valueForKey("success") as! NSInteger
-     
-     //[jsonData[@"success"] integerValue];
-     
-     NSLog("Success: %ld", success);
-     
-     if(success == 1)
-     {
-     NSLog("Sign Up SUCCESS");
-     self.dismissViewControllerAnimated(true, completion: nil)
-     } else {
-     var error_msg:NSString
-     
-     if jsonData["error_message"] as? NSString != nil {
-     error_msg = jsonData["error_message"] as! NSString
-     } else {
-     error_msg = "Unknown Error"
-     }
-     let alertView:UIAlertView = UIAlertView()
-     alertView.title = "Sign Up Failed!"
-     alertView.message = error_msg as String
-     alertView.delegate = self
-     alertView.addButtonWithTitle("OK")
-     alertView.show()
-     
-     }
-     
-     } else {
-     let alertView:UIAlertView = UIAlertView()
-     alertView.title = "Sign Up Failed!"
-     alertView.message = "Connection Failed"
-     alertView.delegate = self
-     alertView.addButtonWithTitle("OK")
-     alertView.show()
-     }
-     }  else {
-     let alertView:UIAlertView = UIAlertView()
-     alertView.title = "Sign in Failed!"
-     alertView.message = "Connection Failure"
-     if let error = reponseError {
-     alertView.message = (error.localizedDescription)
-     }
-     alertView.delegate = self
-     alertView.addButtonWithTitle("OK")
-     alertView.show()
-     }
-     } catch {
-     let alertView:UIAlertView = UIAlertView()
-     alertView.title = "Sign Up Failed!"
-     alertView.message = "Server Error!"
-     alertView.delegate = self
-     alertView.addButtonWithTitle("OK")
-     alertView.show()
-     }
-     }
-     */
+        func textFieldShouldReturn(textField: UITextField) -> Bool {   //delegate method
+            textField.resignFirstResponder()
+            return true
+        }
+
+
 }
-
-
-/*func textFieldShouldReturn(textField: UITextField!) -> Bool {   //delegate method
- textField.resignFirstResponder()
- return true
- }*/
-
-
-
 
 
 

@@ -11,8 +11,8 @@
 		D4861C6C1CB0D02D00824206 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4861C6B1CB0D02D00824206 /* LoginVC.swift */; };
 		D4861C6E1CB0D1AF00824206 /* FirebaseData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4861C6D1CB0D1AF00824206 /* FirebaseData.swift */; };
 		D4861C701CB0D1F000824206 /* SignupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4861C6F1CB0D1F000824206 /* SignupVC.swift */; };
+		D4A6B2561CB1EC0C0058B145 /* RecentOrdersVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4A6B2551CB1EC0C0058B145 /* RecentOrdersVC.swift */; };
 		E2156AA01C6E417700E84F7F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2156A9F1C6E417700E84F7F /* AppDelegate.swift */; };
-		E2156AA21C6E417700E84F7F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2156AA11C6E417700E84F7F /* ViewController.swift */; };
 		E2156AA51C6E417700E84F7F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2156AA31C6E417700E84F7F /* Main.storyboard */; };
 		E2156AA71C6E417700E84F7F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2156AA61C6E417700E84F7F /* Assets.xcassets */; };
 		E2156AAA1C6E417700E84F7F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2156AA81C6E417700E84F7F /* LaunchScreen.storyboard */; };
@@ -51,9 +51,9 @@
 		D4861C6B1CB0D02D00824206 /* LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		D4861C6D1CB0D1AF00824206 /* FirebaseData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseData.swift; sourceTree = "<group>"; };
 		D4861C6F1CB0D1F000824206 /* SignupVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupVC.swift; sourceTree = "<group>"; };
+		D4A6B2551CB1EC0C0058B145 /* RecentOrdersVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecentOrdersVC.swift; sourceTree = "<group>"; };
 		E2156A9C1C6E417700E84F7F /* BuffBurgers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BuffBurgers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2156A9F1C6E417700E84F7F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E2156AA11C6E417700E84F7F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		E2156AA41C6E417700E84F7F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E2156AA61C6E417700E84F7F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E2156AA91C6E417700E84F7F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -144,8 +144,8 @@
 			isa = PBXGroup;
 			children = (
 				E2156A9F1C6E417700E84F7F /* AppDelegate.swift */,
-				E2156AA11C6E417700E84F7F /* ViewController.swift */,
 				D4861C6B1CB0D02D00824206 /* LoginVC.swift */,
+				D4A6B2551CB1EC0C0058B145 /* RecentOrdersVC.swift */,
 				D4861C6D1CB0D1AF00824206 /* FirebaseData.swift */,
 				D4861C6F1CB0D1F000824206 /* SignupVC.swift */,
 				E2156AA31C6E417700E84F7F /* Main.storyboard */,
@@ -441,9 +441,9 @@
 			files = (
 				D4861C6E1CB0D1AF00824206 /* FirebaseData.swift in Sources */,
 				D4861C701CB0D1F000824206 /* SignupVC.swift in Sources */,
-				E2156AA21C6E417700E84F7F /* ViewController.swift in Sources */,
 				E2156AA01C6E417700E84F7F /* AppDelegate.swift in Sources */,
 				D4861C6C1CB0D02D00824206 /* LoginVC.swift in Sources */,
+				D4A6B2561CB1EC0C0058B145 /* RecentOrdersVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

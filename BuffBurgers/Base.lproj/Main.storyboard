@@ -9,7 +9,7 @@
         <!--Login -->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController title="Login " id="BYZ-38-t0r" customClass="ViewController" customModule="BuffBurgers" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Login " id="BYZ-38-t0r" customClass="LoginVC" customModule="BuffBurgers" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -40,7 +40,7 @@
                                     </mask>
                                 </variation>
                                 <connections>
-                                    <segue destination="0WC-hm-sgU" kind="showDetail" id="8Tq-Md-J1O"/>
+                                    <action selector="signinTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xJ1-Gq-EQP"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RsB-h7-hNp">
@@ -49,7 +49,7 @@
                                     <constraint firstAttribute="height" constant="40" id="Z27-eX-qg7"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
-                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
                                 <variation key="heightClass=regular-widthClass=regular">
                                     <mask key="constraints">
                                         <include reference="Z27-eX-qg7"/>
@@ -99,13 +99,23 @@
                                     </mask>
                                 </variation>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BuffBurgers" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BqP-lv-29K">
+                                <rect key="frame" x="157" y="44" width="286" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="286" id="M29-WJ-szM"/>
+                                    <constraint firstAttribute="height" constant="60" id="UyP-DX-ejL"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="50"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lEQ-BU-KVE">
                                 <rect key="frame" x="30" y="300" width="540" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="buK-30-8YO"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
-                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="yes" enablesReturnKeyAutomatically="YES"/>
                                 <variation key="heightClass=regular-widthClass=regular">
                                     <mask key="constraints">
                                         <include reference="buK-30-8YO"/>
@@ -147,16 +157,6 @@
                                     </mask>
                                 </variation>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BuffBurgers" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BqP-lv-29K">
-                                <rect key="frame" x="157" y="44" width="286" height="60"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="286" id="M29-WJ-szM"/>
-                                    <constraint firstAttribute="height" constant="60" id="UyP-DX-ejL"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="50"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -256,12 +256,17 @@
                                 <include reference="RsB-h7-hNp"/>
                                 <include reference="9gH-Y6-pxf"/>
                                 <include reference="C21-Fb-djb"/>
-                                <include reference="lEQ-BU-KVE"/>
                                 <include reference="BqP-lv-29K"/>
+                                <include reference="lEQ-BU-KVE"/>
                             </mask>
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" id="UmQ-ov-Uaw"/>
+                    <connections>
+                        <outlet property="txtPassword" destination="RsB-h7-hNp" id="CUd-Su-G0z"/>
+                        <outlet property="txtUsername" destination="lEQ-BU-KVE" id="3mQ-su-nHQ"/>
+                        <segue destination="0WC-hm-sgU" kind="show" identifier="logged_in" id="Q3x-g6-nt3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -270,7 +275,7 @@
         <!--Sign Up-->
         <scene sceneID="sbF-3t-mgn">
             <objects>
-                <viewController title="Sign Up" id="6Pw-Ry-mEu" sceneMemberID="viewController">
+                <viewController title="Sign Up" id="6Pw-Ry-mEu" customClass="SignupVC" customModule="BuffBurgers" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Ov5-Ig-YaR"/>
                         <viewControllerLayoutGuide type="bottom" id="qTS-Ei-jdq"/>
@@ -301,7 +306,7 @@
                                     </mask>
                                 </variation>
                                 <connections>
-                                    <segue destination="RId-GS-lI4" kind="showDetail" id="QoH-b7-hmV"/>
+                                    <action selector="signupTapped:" destination="6Pw-Ry-mEu" eventType="touchUpInside" id="klG-5a-tIT"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Confirm your password:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eWw-xA-gis">
@@ -316,7 +321,7 @@
                                     <constraint firstAttribute="height" constant="40" id="F6K-XF-nzC"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
                             </textField>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ySH-am-dBi">
                                 <rect key="frame" x="300" y="356" width="0.0" height="38"/>
@@ -379,14 +384,6 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dkH-xS-RLQ">
-                                <rect key="frame" x="30" y="179" width="540" height="40"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="qd3-Ko-KY3"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
-                            </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BuffBurgers Sign Up" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kob-oU-RAV">
                                 <rect key="frame" x="169" y="50" width="263" height="33"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="27"/>
@@ -397,6 +394,14 @@
                                 <rect key="frame" x="30" y="452" width="540" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="KPB-91-EWl"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dkH-xS-RLQ">
+                                <rect key="frame" x="30" y="179" width="540" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="qd3-Ko-KY3"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
@@ -459,6 +464,12 @@
                         </variation>
                     </view>
                     <toolbarItems/>
+                    <connections>
+                        <outlet property="txtConfirmPassword" destination="ry3-4p-GfY" id="0Qy-SX-5K9"/>
+                        <outlet property="txtPassword" destination="rAk-Yg-juZ" id="HNq-S0-4wN"/>
+                        <outlet property="txtUsername" destination="dkH-xS-RLQ" id="mrx-dH-Qo9"/>
+                        <segue destination="RId-GS-lI4" kind="show" identifier="signed_up" id="BaG-V0-gzK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zhu-WF-TSc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -604,7 +615,7 @@
         <!--Recent Orders-->
         <scene sceneID="Ca7-38-kIN">
             <objects>
-                <viewController title="Recent Orders" id="0WC-hm-sgU" sceneMemberID="viewController">
+                <viewController title="Recent Orders" id="0WC-hm-sgU" customClass="RecentOrdersVC" customModule="BuffBurgers" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="o2X-L3-5Qk"/>
                         <viewControllerLayoutGuide type="bottom" id="7cM-lk-O4g"/>
@@ -1156,7 +1167,7 @@ on the</string>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="bGm-dp-qqW"/>
-        <segue reference="jWz-v0-U87"/>
+        <segue reference="Q3x-g6-nt3"/>
+        <segue reference="p9M-mo-Wdr"/>
     </inferredMetricsTieBreakers>
 </document>
