@@ -12,6 +12,7 @@
 		D4861C6E1CB0D1AF00824206 /* FirebaseData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4861C6D1CB0D1AF00824206 /* FirebaseData.swift */; };
 		D4861C701CB0D1F000824206 /* SignupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4861C6F1CB0D1F000824206 /* SignupVC.swift */; };
 		D4A6B2561CB1EC0C0058B145 /* RecentOrdersVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4A6B2551CB1EC0C0058B145 /* RecentOrdersVC.swift */; };
+		D4A6B2581CB1F1C30058B145 /* OrderVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4A6B2571CB1F1C30058B145 /* OrderVC.swift */; };
 		E2156AA01C6E417700E84F7F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2156A9F1C6E417700E84F7F /* AppDelegate.swift */; };
 		E2156AA51C6E417700E84F7F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2156AA31C6E417700E84F7F /* Main.storyboard */; };
 		E2156AA71C6E417700E84F7F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2156AA61C6E417700E84F7F /* Assets.xcassets */; };
@@ -52,6 +53,7 @@
 		D4861C6D1CB0D1AF00824206 /* FirebaseData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseData.swift; sourceTree = "<group>"; };
 		D4861C6F1CB0D1F000824206 /* SignupVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupVC.swift; sourceTree = "<group>"; };
 		D4A6B2551CB1EC0C0058B145 /* RecentOrdersVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecentOrdersVC.swift; sourceTree = "<group>"; };
+		D4A6B2571CB1F1C30058B145 /* OrderVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderVC.swift; sourceTree = "<group>"; };
 		E2156A9C1C6E417700E84F7F /* BuffBurgers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BuffBurgers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2156A9F1C6E417700E84F7F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E2156AA41C6E417700E84F7F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -149,6 +151,7 @@
 				D4861C6D1CB0D1AF00824206 /* FirebaseData.swift */,
 				D4861C6F1CB0D1F000824206 /* SignupVC.swift */,
 				E2156AA31C6E417700E84F7F /* Main.storyboard */,
+				D4A6B2571CB1F1C30058B145 /* OrderVC.swift */,
 				E2156AA61C6E417700E84F7F /* Assets.xcassets */,
 				E2156AA81C6E417700E84F7F /* LaunchScreen.storyboard */,
 				E2156AAB1C6E417700E84F7F /* Info.plist */,
@@ -439,6 +442,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4A6B2581CB1F1C30058B145 /* OrderVC.swift in Sources */,
 				D4861C6E1CB0D1AF00824206 /* FirebaseData.swift in Sources */,
 				D4861C701CB0D1F000824206 /* SignupVC.swift in Sources */,
 				E2156AA01C6E417700E84F7F /* AppDelegate.swift in Sources */,
