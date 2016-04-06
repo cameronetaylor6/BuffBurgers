@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10109" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="YUZ-1S-GgE">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10109" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10083"/>
@@ -745,10 +745,16 @@
                             <pickerView tag="2" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tN6-pE-9ob" userLabel="Heat">
                                 <rect key="frame" x="30" y="171" width="540" height="58"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="YUZ-1S-GgE" id="Ncg-yY-jse"/>
+                                </connections>
                             </pickerView>
                             <pickerView tag="4" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v5V-Lg-cFz" userLabel="Bun">
                                 <rect key="frame" x="30" y="367" width="540" height="58"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="YUZ-1S-GgE" id="oru-lK-pnf"/>
+                                </connections>
                             </pickerView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5z5-RW-QWE">
                                 <rect key="frame" x="90" y="295" width="100" height="10"/>
@@ -800,6 +806,9 @@
                             <pickerView tag="3" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xd9-mb-GDd" userLabel="Cheese">
                                 <rect key="frame" x="30" y="269" width="540" height="58"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="YUZ-1S-GgE" id="n5B-da-uKn"/>
+                                </connections>
                             </pickerView>
                             <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="229" verticalCompressionResistancePriority="749" misplaced="YES" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iqb-sT-Txd">
                                 <rect key="frame" x="130" y="443" width="30" height="30"/>
@@ -1191,7 +1200,7 @@ on the</string>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="bGm-dp-qqW"/>
+        <segue reference="Q3x-g6-nt3"/>
         <segue reference="jWz-v0-U87"/>
     </inferredMetricsTieBreakers>
 </document>

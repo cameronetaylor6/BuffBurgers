@@ -53,8 +53,8 @@ class OrderVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
     override func viewWillAppear(animated: Bool) {
         //Lcheck.setTitle("✅", forState: UIControlState.Selected)
         //Tcheck.setTitle("◻️", forState: UIControlState.Normal)
-        Ocheck.setTitle("◻️", forState: UIControlState.Normal)
-        Pcheck.setTitle("◻️", forState: UIControlState.Normal)
+        //Ocheck.setTitle("◻️", forState: UIControlState.Normal)
+        //Pcheck.setTitle("◻️", forState: UIControlState.Normal)
 
     }
     
@@ -91,17 +91,17 @@ class OrderVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
             return "\(Burgerchoices[row])"
         }
         if (pickerView.tag == 2){
-            userburger = "\(Heatchoices[row])"
+            userheat = "\(Heatchoices[row])"
             print("heat")
             return "\(Heatchoices[row])"
         }
         if (pickerView.tag == 3){
-            userburger = "\(Cheesechoices[row])"
+            usercheese = "\(Cheesechoices[row])"
             print("cheese")
             return "\(Cheesechoices[row])"
         }
         if (pickerView.tag == 4){
-            userburger = "\(Bunchoices[row])"
+            userbun = "\(Bunchoices[row])"
             print("bun")
             return "\(Bunchoices[row])"
         }
@@ -167,9 +167,9 @@ class OrderVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
         
         
         let order1 = ["burger": userburger, "heat": userheat, "cheese": usercheese, "bun": userbun, "lettuce": lettuce, "tomato": tomato, "onion": onion, "pickle": pickle]
-        print(order1)
-        //let order1Ref = DataService.dataservice._refFirebase.childByAppendingPath("orders").childByAutoId()
-        //order1Ref.setValue(order1)
+        //print(order1)
+        let order1Ref = DataService.dataservice._refFirebase.childByAppendingPath("orders").childByAutoId()
+        order1Ref.setValue(order1)
         //do this so long as there was no error
         self.performSegueWithIdentifier("order_confirmed", sender: nil)
     }
