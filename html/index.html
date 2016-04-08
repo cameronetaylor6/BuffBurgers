@@ -43,6 +43,31 @@
 					} 
 				}); swal("Success!", "Your order was placed", "success")
 	}
+
+	//Function tests if BuffBurgers form is completely filled out
+	function testFilledForm(){
+		var failed = false;
+		if(document.getElementById('first_name').value == "") failed = true;
+		if(document.getElementById('last_name').value == "") failed = true;
+		if(document.getElementById('ID').value == "") failed = true;
+		if(document.getElementById('burger').value == "") failed = true;
+		if(document.getElementById('temp').value == "") failed = true;
+		if(failed) console.log("Expected a fully filled form");
+	}
+
+	//Function tests if the customer selected too many cheeses
+	function testMultipleCheese(){
+		var checkedValue = null; 
+		var inputElements = document.getElementsByClassName('cheese');
+		var numberOfCheese = 0;
+		for(var i=0; inputElements[i]; ++i){
+      if(inputElements[i].checked){
+          checkedValue = inputElements[i].value;
+          numberOfCheese += 1;
+      }
+		}
+		if(numberOfCheese > 1) console.log("Expected only one cheese");
+	}
 </script>
 		<!-- Form Collum -->
 		<div class="container">
@@ -81,27 +106,27 @@
 				<div class = "form-group">
 				<label for="temperature">How Would You Like Your Burger Cooked?</label>
  				 <select class="form-control" id="temp">
-    				<option>155&deg</option>
-   					<option>160&deg</option>
-    				<option>165&deg</option>
-   					<option>170&deg</option>
-   					<option>175&deg</option>
+    				<option>155&deg;</option>
+   					<option>160&deg;</option>
+    				<option>165&deg;</option>
+   					<option>170&deg;</option>
+   					<option>175&deg;</option>
  				 </select>
  				</div>
 			</div>
 			<div class="col-md-6 col-md-offset-4 form-group">
 				<label for="cheese">Cheese?</label>
 				<div class="checkbox-inline">
-					<input type = "checkbox" value="">Chedder
+					<input class="cheese" type = "checkbox" value="cheddar" id="cheddar">Chedder
 				</div>
 				<div class="checkbox-inline">
-					<input type="checkbox" value="">Provolone
+					<input class="cheese" type="checkbox" value="provolone">Provolone
 				</div>
 				<div class="checkbox-inline">
-					<input type="checkbox" value="">Swiss
+					<input class="cheese" type="checkbox" value="swiss">Swiss
 				</div>
 				<div class="checkbox-inline">
-					<input type="checkbox" value="">Pepper Jack
+					<input class="cheese" type="checkbox" value="pepper jack">Pepper Jack
 				</div>
 			</div>
 			<div class="col-md-6 col-md-offset-4 form-group">
@@ -130,7 +155,7 @@
  				</div>
 			</div>
 			<div class = "col-md-6 col-md-offset-4">
-				<button type="submit" class="btn btn-default" onclick="alert();">Submit</button>
+				<button type="submit" class="btn btn-default" onclick="alert(); testFilledForm(); testMultipleCheese();">Submit</button>
 			</div>
 		</div>
 			
