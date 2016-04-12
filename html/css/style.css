@@ -17,11 +17,13 @@ label, input {
 }   
   
 label {
-	margin-bottom: 8px;
+	margin-top: 7px;
+	margin-bottom: 7px;
 }   
 
 h1{ 
 	text-align: center; 
+	padding-bottom:2%;
 }   
 
 .btn-default {
@@ -30,6 +32,4 @@ h1{
 }
    
 .btn-default:hover {
-	background: #000;
-	color: #fff;
 }   
