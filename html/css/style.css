@@ -26,10 +26,28 @@ h1{
 	padding-bottom:2%;
 }   
 
+img {
+	display: block;
+	margin-left: auto; 
+	margin-right: auto;
+	width: 41%;
+	padding-bottom:3%;
+	padding-top:3%;
+}
+
 .btn-default {
 	background: #fff;
 	color: #000;
 }
    
 .btn-default:hover {
-}   
+} 
+@media all and (min-width:992px) {
+#left{
+	padding-right:5%;
+}
+
+#right {
+	padding-left:5%;
+}  
+}
