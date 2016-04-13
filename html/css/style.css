@@ -42,6 +42,11 @@ img {
    
 .btn-default:hover {
 } 
+
+#left .form-group {
+	margin-bottom:0;
+}
+
 @media all and (min-width:992px) {
 #left{
 	padding-right:5%;
