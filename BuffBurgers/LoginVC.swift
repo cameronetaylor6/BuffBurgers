@@ -7,6 +7,8 @@
 
 import UIKit
 import Firebase
+//var userID = ref.childByAppendingPath("\(ref.authData.uid)")
+var userID : String = ""
 
 class LoginVC: UIViewController,UITextFieldDelegate {
     
@@ -37,6 +39,7 @@ class LoginVC: UIViewController,UITextFieldDelegate {
         
         
         let email = txtUsername.text!
+        //userID = email
         let password = txtPassword.text!
         
         if ( email.isEmpty == false && password.isEmpty == false)
@@ -60,6 +63,7 @@ class LoginVC: UIViewController,UITextFieldDelegate {
                 {
                     print("there was no error")
                     self.performSegueWithIdentifier("logged_in", sender: nil)
+                    userID = email
                 }
                 
             })

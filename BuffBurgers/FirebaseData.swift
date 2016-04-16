@@ -7,6 +7,8 @@
 //
 
 import Firebase
+let ref = Firebase(url: "https://myapp.firebaseio.com")
+let Uref = Firebase(url: "https://myapp.firebaseio.com/users")
 
 let url = "https://buffburgers.firebaseio.com"
 
