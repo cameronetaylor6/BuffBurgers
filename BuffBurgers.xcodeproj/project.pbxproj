@@ -7,8 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		17D9D703A0C43F1196A1BAF4 /* Pods_BuffBurgers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BE4E4E5B844DFAB37EA4A3F /* Pods_BuffBurgers.framework */; };
+		42541B693DD1327DAD6B9B72 /* Pods_BuffBurgersTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4EFC8AADE86155493B46B3F /* Pods_BuffBurgersTests.framework */; };
+		68974C5AA0B99D3B0F6C1B11 /* Pods_BuffBurgersUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3918F193B4CCAD56F0C5093 /* Pods_BuffBurgersUITests.framework */; };
+		D4516F6E1CC5930500F753C4 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4516F691CC5930500F753C4 /* LoginVC.swift */; };
+		D4516F6F1CC5930500F753C4 /* RecentOrdersVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4516F6A1CC5930500F753C4 /* RecentOrdersVC.swift */; };
+		D4516F701CC5930500F753C4 /* FirebaseData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4516F6B1CC5930500F753C4 /* FirebaseData.swift */; };
+		D4516F711CC5930500F753C4 /* SignupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4516F6C1CC5930500F753C4 /* SignupVC.swift */; };
+		D4516F721CC5930500F753C4 /* OrderVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4516F6D1CC5930500F753C4 /* OrderVC.swift */; };
 		E2156AA01C6E417700E84F7F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2156A9F1C6E417700E84F7F /* AppDelegate.swift */; };
-		E2156AA21C6E417700E84F7F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2156AA11C6E417700E84F7F /* ViewController.swift */; };
 		E2156AA51C6E417700E84F7F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2156AA31C6E417700E84F7F /* Main.storyboard */; };
 		E2156AA71C6E417700E84F7F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2156AA61C6E417700E84F7F /* Assets.xcassets */; };
 		E2156AAA1C6E417700E84F7F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2156AA81C6E417700E84F7F /* LaunchScreen.storyboard */; };
@@ -34,9 +41,21 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		22659025BCBCC735AA37FC36 /* Pods-BuffBurgersUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BuffBurgersUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BuffBurgersUITests/Pods-BuffBurgersUITests.release.xcconfig"; sourceTree = "<group>"; };
+		4BE4E4E5B844DFAB37EA4A3F /* Pods_BuffBurgers.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BuffBurgers.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		51D23C0E3928E20F0878D25B /* Pods-BuffBurgersTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BuffBurgersTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BuffBurgersTests/Pods-BuffBurgersTests.debug.xcconfig"; sourceTree = "<group>"; };
+		6410CE597C033A621905E47E /* Pods-BuffBurgersUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BuffBurgersUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BuffBurgersUITests/Pods-BuffBurgersUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		6C7750D509410B4CBDDC1DA8 /* Pods-BuffBurgersTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BuffBurgersTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BuffBurgersTests/Pods-BuffBurgersTests.release.xcconfig"; sourceTree = "<group>"; };
+		B3918F193B4CCAD56F0C5093 /* Pods_BuffBurgersUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BuffBurgersUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B4BDAA6A98B17EC38D8EF949 /* Pods-BuffBurgers.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BuffBurgers.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BuffBurgers/Pods-BuffBurgers.debug.xcconfig"; sourceTree = "<group>"; };
+		C4EFC8AADE86155493B46B3F /* Pods_BuffBurgersTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BuffBurgersTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D4516F691CC5930500F753C4 /* LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		D4516F6A1CC5930500F753C4 /* RecentOrdersVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecentOrdersVC.swift; sourceTree = "<group>"; };
+		D4516F6B1CC5930500F753C4 /* FirebaseData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseData.swift; sourceTree = "<group>"; };
+		D4516F6C1CC5930500F753C4 /* SignupVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupVC.swift; sourceTree = "<group>"; };
+		D4516F6D1CC5930500F753C4 /* OrderVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderVC.swift; sourceTree = "<group>"; };
 		E2156A9C1C6E417700E84F7F /* BuffBurgers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BuffBurgers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2156A9F1C6E417700E84F7F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E2156AA11C6E417700E84F7F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		E2156AA41C6E417700E84F7F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E2156AA61C6E417700E84F7F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E2156AA91C6E417700E84F7F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +66,7 @@
 		E2156ABB1C6E417700E84F7F /* BuffBurgersUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BuffBurgersUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2156ABF1C6E417700E84F7F /* BuffBurgersUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuffBurgersUITests.swift; sourceTree = "<group>"; };
 		E2156AC11C6E417700E84F7F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F2E9AE1B5842162D47316387 /* Pods-BuffBurgers.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BuffBurgers.release.xcconfig"; path = "Pods/Target Support Files/Pods-BuffBurgers/Pods-BuffBurgers.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				17D9D703A0C43F1196A1BAF4 /* Pods_BuffBurgers.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				42541B693DD1327DAD6B9B72 /* Pods_BuffBurgersTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,12 +90,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				68974C5AA0B99D3B0F6C1B11 /* Pods_BuffBurgersUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		594EF90930F715C6DCBF2570 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B4BDAA6A98B17EC38D8EF949 /* Pods-BuffBurgers.debug.xcconfig */,
+				F2E9AE1B5842162D47316387 /* Pods-BuffBurgers.release.xcconfig */,
+				51D23C0E3928E20F0878D25B /* Pods-BuffBurgersTests.debug.xcconfig */,
+				6C7750D509410B4CBDDC1DA8 /* Pods-BuffBurgersTests.release.xcconfig */,
+				6410CE597C033A621905E47E /* Pods-BuffBurgersUITests.debug.xcconfig */,
+				22659025BCBCC735AA37FC36 /* Pods-BuffBurgersUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		D6657614878CD418C75CC349 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4BE4E4E5B844DFAB37EA4A3F /* Pods_BuffBurgers.framework */,
+				C4EFC8AADE86155493B46B3F /* Pods_BuffBurgersTests.framework */,
+				B3918F193B4CCAD56F0C5093 /* Pods_BuffBurgersUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		E2156A931C6E417700E84F7F = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +127,8 @@
 				E2156AB31C6E417700E84F7F /* BuffBurgersTests */,
 				E2156ABE1C6E417700E84F7F /* BuffBurgersUITests */,
 				E2156A9D1C6E417700E84F7F /* Products */,
+				594EF90930F715C6DCBF2570 /* Pods */,
+				D6657614878CD418C75CC349 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -98,7 +146,11 @@
 			isa = PBXGroup;
 			children = (
 				E2156A9F1C6E417700E84F7F /* AppDelegate.swift */,
-				E2156AA11C6E417700E84F7F /* ViewController.swift */,
+				D4516F691CC5930500F753C4 /* LoginVC.swift */,
+				D4516F6A1CC5930500F753C4 /* RecentOrdersVC.swift */,
+				D4516F6B1CC5930500F753C4 /* FirebaseData.swift */,
+				D4516F6C1CC5930500F753C4 /* SignupVC.swift */,
+				D4516F6D1CC5930500F753C4 /* OrderVC.swift */,
 				E2156AA31C6E417700E84F7F /* Main.storyboard */,
 				E2156AA61C6E417700E84F7F /* Assets.xcassets */,
 				E2156AA81C6E417700E84F7F /* LaunchScreen.storyboard */,
@@ -132,9 +184,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E2156AC41C6E417700E84F7F /* Build configuration list for PBXNativeTarget "BuffBurgers" */;
 			buildPhases = (
+				ED841AAAA5A17C460D924A96 /* Check Pods Manifest.lock */,
 				E2156A981C6E417700E84F7F /* Sources */,
 				E2156A991C6E417700E84F7F /* Frameworks */,
 				E2156A9A1C6E417700E84F7F /* Resources */,
+				1ABCF55ACC45CB79A13F7458 /* Embed Pods Frameworks */,
+				0C6884DB150B468024AD8887 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -149,9 +204,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E2156AC71C6E417700E84F7F /* Build configuration list for PBXNativeTarget "BuffBurgersTests" */;
 			buildPhases = (
+				EAA2933917ACC5894DFAFE55 /* Check Pods Manifest.lock */,
 				E2156AAC1C6E417700E84F7F /* Sources */,
 				E2156AAD1C6E417700E84F7F /* Frameworks */,
 				E2156AAE1C6E417700E84F7F /* Resources */,
+				35D8A4D7CEE1B7B0196EB71F /* Embed Pods Frameworks */,
+				8BEF28128A145723C028B8DB /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -167,9 +225,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E2156ACA1C6E417700E84F7F /* Build configuration list for PBXNativeTarget "BuffBurgersUITests" */;
 			buildPhases = (
+				A60D6CC98C827B4141201F18 /* Check Pods Manifest.lock */,
 				E2156AB71C6E417700E84F7F /* Sources */,
 				E2156AB81C6E417700E84F7F /* Frameworks */,
 				E2156AB91C6E417700E84F7F /* Resources */,
+				B52BF092E6CDC66243C4138A /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -254,13 +314,140 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0C6884DB150B468024AD8887 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BuffBurgers/Pods-BuffBurgers-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1ABCF55ACC45CB79A13F7458 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BuffBurgers/Pods-BuffBurgers-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		35D8A4D7CEE1B7B0196EB71F /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BuffBurgersTests/Pods-BuffBurgersTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8BEF28128A145723C028B8DB /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BuffBurgersTests/Pods-BuffBurgersTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A60D6CC98C827B4141201F18 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		B52BF092E6CDC66243C4138A /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BuffBurgersUITests/Pods-BuffBurgersUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EAA2933917ACC5894DFAFE55 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		ED841AAAA5A17C460D924A96 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		E2156A981C6E417700E84F7F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E2156AA21C6E417700E84F7F /* ViewController.swift in Sources */,
+				D4516F721CC5930500F753C4 /* OrderVC.swift in Sources */,
+				D4516F711CC5930500F753C4 /* SignupVC.swift in Sources */,
+				D4516F6F1CC5930500F753C4 /* RecentOrdersVC.swift in Sources */,
 				E2156AA01C6E417700E84F7F /* AppDelegate.swift in Sources */,
+				D4516F701CC5930500F753C4 /* FirebaseData.swift in Sources */,
+				D4516F6E1CC5930500F753C4 /* LoginVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -400,6 +587,7 @@
 		};
 		E2156AC51C6E417700E84F7F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B4BDAA6A98B17EC38D8EF949 /* Pods-BuffBurgers.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = BuffBurgers/Info.plist;
@@ -412,6 +600,7 @@
 		};
 		E2156AC61C6E417700E84F7F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F2E9AE1B5842162D47316387 /* Pods-BuffBurgers.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = BuffBurgers/Info.plist;
@@ -424,6 +613,7 @@
 		};
 		E2156AC81C6E417700E84F7F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 51D23C0E3928E20F0878D25B /* Pods-BuffBurgersTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = BuffBurgersTests/Info.plist;
@@ -436,6 +626,7 @@
 		};
 		E2156AC91C6E417700E84F7F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6C7750D509410B4CBDDC1DA8 /* Pods-BuffBurgersTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = BuffBurgersTests/Info.plist;
@@ -448,6 +639,7 @@
 		};
 		E2156ACB1C6E417700E84F7F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6410CE597C033A621905E47E /* Pods-BuffBurgersUITests.debug.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = BuffBurgersUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -460,6 +652,7 @@
 		};
 		E2156ACC1C6E417700E84F7F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 22659025BCBCC735AA37FC36 /* Pods-BuffBurgersUITests.release.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = BuffBurgersUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
