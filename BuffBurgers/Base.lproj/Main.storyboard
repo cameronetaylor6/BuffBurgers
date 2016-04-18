@@ -39,9 +39,6 @@
                                         <include reference="mwo-ft-5gU"/>
                                     </mask>
                                 </variation>
-                                <connections>
-                                    <segue destination="0WC-hm-sgU" kind="showDetail" id="8Tq-Md-J1O"/>
-                                </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RsB-h7-hNp">
                                 <rect key="frame" x="30" y="360" width="540" height="40"/>
