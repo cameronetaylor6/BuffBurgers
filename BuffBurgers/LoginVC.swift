@@ -7,7 +7,7 @@
 
 import UIKit
 import Firebase
-//var userID = ref.childByAppendingPath("\(ref.authData.uid)")
+
 var userID : String = ""
 
 class LoginVC: UIViewController,UITextFieldDelegate {
@@ -15,6 +15,7 @@ class LoginVC: UIViewController,UITextFieldDelegate {
     
     @IBOutlet var txtUsername : UITextField!
     @IBOutlet var txtPassword : UITextField!
+    var mail : UITextField!
     var error_msg:NSString = ""
     var reponseError: NSError?
     var response: NSURLResponse?
@@ -35,11 +36,10 @@ class LoginVC: UIViewController,UITextFieldDelegate {
     
     @IBAction func signinTapped(sender : UIButton)
     {
-        var ref = Firebase(url: "https://buffburgers.firebaseio.com")
+        //var ref = Firebase(url: "https://buffburgers.firebaseio.com")
         
         
         let email = txtUsername.text!
-        //userID = email
         let password = txtPassword.text!
         
         if ( email.isEmpty == false && password.isEmpty == false)
@@ -62,8 +62,8 @@ class LoginVC: UIViewController,UITextFieldDelegate {
                 else
                 {
                     print("there was no error")
-                    self.performSegueWithIdentifier("logged_in", sender: nil)
                     userID = email
+                    self.performSegueWithIdentifier("logged_in", sender: nil)
                 }
                 
             })
@@ -77,6 +77,43 @@ class LoginVC: UIViewController,UITextFieldDelegate {
         }
     }
     
+    @IBAction func forgotpasswordTapped(sender : UIButton)
+    {
+        let alertController = UIAlertController(title: "Password Reset Request", message: "Please Enter Account Email", preferredStyle: .Alert)
+        
+        let OKAction = UIAlertAction(title: "OK", style: .Default, handler: {
+            (action) -> Void in
+            self.mail = alertController.textFields![0] as UITextField
+            
+            DataService.dataservice._refFirebase.resetPasswordForUser(self.mail.text!, withCompletionBlock: { error in
+                if error != nil
+                {
+                    // There was an error processing the request
+                    let alertController = UIAlertController(title: "Password Reset Failed!", message: "There is no Account for this Email", preferredStyle: .Alert)
+                    let OKAction = UIAlertAction(title: "OK", style: .Cancel) { action -> Void in }
+                    alertController.addAction(OKAction)
+                    self.presentViewController(alertController, animated: true, completion: nil)
+                    print("NO error")
+                }
+                else
+                {
+                    // Password reset sent successfully
+                    let alertController = UIAlertController(title: "Password is Reset!", message: "Please Check Your Email", preferredStyle: .Alert)
+                    let OKAction = UIAlertAction(title: "OK", style: .Cancel) { action -> Void in }
+                    alertController.addAction(OKAction)
+                    self.presentViewController(alertController, animated: true, completion: nil)
+                }
+            })
+            
+        })
+        
+        alertController.addTextFieldWithConfigurationHandler { (textField : UITextField!) -> Void in
+            textField.placeholder = "Enter Account Email"
+        }
+        alertController.addAction(OKAction)
+        self.presentViewController(alertController, animated: true, completion: nil)
+        
+    }
     
     
     func textFieldShouldReturn(textField: UITextField) -> Bool {   //delegate method

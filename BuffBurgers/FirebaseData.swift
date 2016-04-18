@@ -7,8 +7,6 @@
 //
 
 import Firebase
-let ref = Firebase(url: "https://myapp.firebaseio.com")
-let Uref = Firebase(url: "https://myapp.firebaseio.com/users")
 
 let url = "https://buffburgers.firebaseio.com"
 
@@ -31,7 +29,7 @@ class DataService {
     
     var refusercurrent: Firebase {
         
-        let uid = NSUserDefaults.standardUserDefaults().valueForKey("uid") as! String
+        let uid = NSUserDefaults.standardUserDefaults().valueForKey("uid") as!String
         let user = Firebase(url: "\(url)").childByAppendingPath("users").childByAppendingPath("uid")
         
         return user

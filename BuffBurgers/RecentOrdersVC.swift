@@ -9,28 +9,25 @@
 
 import UIKit
 import Firebase
-import Foundation
+
 class RecentOrdersVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet var tableview: UITableView!
     var ords : [String] = []
     var orders : [[String]] = []
-    var i = 0
-    
     
     func getOrders(){
         //connects to database and captures the current data of orders
-        DataService.dataservice._refFirebase.childByAppendingPath("orders").queryLimitedToLast(3).observeEventType(
-           FEventType.Value, withBlock: { snapshot in
-            
+        DataService.dataservice._refFirebase.childByAppendingPath("orders").observeEventType(
+            FEventType.Value, withBlock: { snapshot in
+                
                 //loops through the current data of each child of orders
                 for child in snapshot.children
                 {
                     
                     let childSnapshot = snapshot.childSnapshotForPath(child.key)
                     let id = childSnapshot.value["userID"]
-                    //let timestamp = childSnapshot.value["priority"]
-
+                    
                     //compares ids to grab orders of only the user logged in
                     if userID.isEqual(id)
                     {
@@ -44,29 +41,34 @@ class RecentOrdersVC: UIViewController, UITableViewDataSource, UITableViewDelega
                         let pickle = childSnapshot.value["pickle"] as! String
                         let order = [burger, heat, cheese, bun, lettuce, tomato, onion, pickle]
                         self.orders.append(order)
-
+                        
                     }
                 }
-            
-            //print("orders ", self.orders)
-            //print("num orders ", self.orders.count)
-            //loops through every order in array of users total orders
-            for object in self.orders
-            {
-                //creates string to show in recent orders table
-            
-                var c = object.joinWithSeparator(", ")
-                c = c.stringByReplacingOccurrencesOfString(", ,", withString: ",")
-                //c = c.stringByReplacingOccurrencesOfString(",,,, ", withString: ", ")
-                //c = c.stringByReplacingOccurrencesOfString(",,, ", withString: ",
-                self.ords.append(c)
-                self.ords = self.ords.reverse()
-                print(c)
-            }
-            
-            
+                
+                print("orders ", self.orders)
+                //loops through every order in array of users total orders
+                for var object in self.orders
+                {
+                    //loops through every order to delete any empty listed choices
+                    for i in 0 ..< 8
+                    {
+                        if object[i].isEmpty == true
+                        {
+                            print(i)
+                            print("wrong")
+                            print("object ", object)
+                            object.removeAtIndex(i)
+                        }
+                    }
+                    //creates string to show in recent orders table
+                    let c = object.joinWithSeparator(", ")
+                    self.ords.append(c)
+                    print(c)
+                }
+                
+                
         })
-               
+        
     }
     
     override func viewDidLoad() {
@@ -88,7 +90,7 @@ class RecentOrdersVC: UIViewController, UITableViewDataSource, UITableViewDelega
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath)
         cell.textLabel!.numberOfLines = 0
-        cell.textLabel?.text = ords[indexPath.item]
+        cell.textLabel?.text = ords[indexPath.item] as? String
         cell.textLabel!.lineBreakMode = NSLineBreakMode.ByWordWrapping
         return cell
     }
