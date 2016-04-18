@@ -983,10 +983,10 @@
                         <outlet property="Burger" destination="OCm-Ph-Eah" id="G6j-pg-I91"/>
                         <outlet property="Cheese" destination="xd9-mb-GDd" id="FD6-7c-YeO"/>
                         <outlet property="Heat" destination="tN6-pE-9ob" id="WrE-ej-B7L"/>
-                        <outlet property="Lcheck" destination="Iqb-sT-Txd" id="1c8-kQ-oW2"/>
-                        <outlet property="Ocheck" destination="Kyc-mi-4tx" id="9Ap-Hx-Wxt"/>
-                        <outlet property="Pcheck" destination="bbg-sk-c7C" id="DzE-Kv-aTL"/>
-                        <outlet property="Tcheck" destination="CWL-2h-XhI" id="fYz-iy-Pg9"/>
+                        <outlet property="Lcheck" destination="Iqb-sT-Txd" id="EVT-50-gEM"/>
+                        <outlet property="Ocheck" destination="Kyc-mi-4tx" id="8pc-No-0ce"/>
+                        <outlet property="Pcheck" destination="bbg-sk-c7C" id="6KG-nd-hdx"/>
+                        <outlet property="Tcheck" destination="CWL-2h-XhI" id="q60-un-uNY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ihy-qo-kTN" userLabel="First Responder" sceneMemberID="firstResponder"/>

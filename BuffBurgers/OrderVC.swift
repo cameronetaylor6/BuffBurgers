@@ -23,17 +23,17 @@ class OrderVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
     var userheat : String = ""
     var usercheese : String = ""
     var userbun : String = ""
-    var lettuce : String = ""
-    var tomato : String = ""
-    var onion : String = ""
-    var pickle : String = ""
+    var lettuce : String = ""//"0"
+    var tomato : String = ""//"0"
+    var onion : String = ""//"0"
+    var pickle : String = ""//"0"
     
     @IBOutlet weak var Lcheck: UIButton!
     @IBOutlet weak var Tcheck: UIButton!
     @IBOutlet weak var Ocheck: UIButton!
     @IBOutlet weak var Pcheck: UIButton!
     
-    var order1:[String:String] = [:]
+    lazy var order1 : [String:String] = ["userID": userID, "burger": self.userburger, "heat": self.userheat, "cheese": self.usercheese, "bun": self.userbun, "lettuce": self.lettuce, "tomato": self.tomato, "onion": self.onion, "pickle": self.pickle]
 
     
     override func viewDidLoad() {
@@ -51,14 +51,6 @@ class OrderVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
         Tcheck.setTitle("◻️", forState: UIControlState.Normal)
         Ocheck.setTitle("◻️", forState: UIControlState.Normal)
         Pcheck.setTitle("◻️", forState: UIControlState.Normal)
-    }
-    
-    override func viewWillAppear(animated: Bool) {
-        //Lcheck.setTitle("✅", forState: UIControlState.Selected)
-        //Tcheck.setTitle("◻️", forState: UIControlState.Normal)
-        //Ocheck.setTitle("◻️", forState: UIControlState.Normal)
-        //Pcheck.setTitle("◻️", forState: UIControlState.Normal)
-
     }
     
     
@@ -90,18 +82,23 @@ class OrderVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
     func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         if (pickerView.tag == 1){
             userburger = "\(Burgerchoices[row])"
+            order1.updateValue(userburger, forKey: "burger")
             return "\(Burgerchoices[row])"
         }
         if (pickerView.tag == 2){
             userheat = "\(Heatchoices[row])"
+            print(userheat)
+            order1.updateValue(userheat, forKey: "heat")
             return "\(Heatchoices[row])"
         }
         if (pickerView.tag == 3){
             usercheese = "\(Cheesechoices[row])"
+            order1.updateValue(usercheese, forKey: "cheese")
             return "\(Cheesechoices[row])"
         }
         if (pickerView.tag == 4){
             userbun = "\(Bunchoices[row])"
+            order1.updateValue(userbun, forKey: "bun")
             return "\(Bunchoices[row])"
         }
         else{
@@ -114,14 +111,14 @@ class OrderVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
         if Lcheck.currentTitle == "◻️" {
             //update button to select icon
             Lcheck.setTitle("✅", forState: .Normal)
-            lettuce = "Lettuce"
-            order1.updateValue("Lettuce", forKey: lettuce)
+            order1.updateValue("Lettuce", forKey: "lettuce")
+            print("dictionary",order1)
         }
         else{
             //update button to deselect icon
             Lcheck.setTitle("◻️", forState: .Normal)
-            lettuce = "No Lettuce"
-            order1.updateValue("0", forKey: lettuce)
+            order1.updateValue("0", forKey: "lettuce")
+            print("Dictionary ", order1)
         }
     }
     
@@ -129,12 +126,14 @@ class OrderVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
         if Tcheck.currentTitle == "◻️" {
             //update button to select icon
             Tcheck.setTitle("✅", forState: .Normal)
-            order1.updateValue("Tomato", forKey: tomato)
+            order1.updateValue("Tomato", forKey: "tomato")
+            print("dictionary ", order1)
         }
         else{
             //update button to deselect icon
             Tcheck.setTitle("◻️", forState: .Normal)
-            order1.updateValue("0", forKey: tomato)
+            order1.updateValue("0", forKey: "tomato")
+            print("Dictionary ", order1)
         }
     }
     
@@ -142,33 +141,33 @@ class OrderVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
         if Ocheck.currentTitle == "◻️" {
             //update button to select icon
             Ocheck.setTitle("✅", forState: .Normal)
-            order1.updateValue("Onion", forKey: onion)
+            order1.updateValue("Onion", forKey: "onion")
+            print("dictionary ", order1)
         }
         else{
             //update button to delselect icon
             Ocheck.setTitle("◻️", forState: .Normal)
-            order1.updateValue("0", forKey: onion)
+            order1.updateValue("0", forKey: "onion")
+            print("Dictionary ", order1)
         }
     }
     
     @IBAction func PickleTapped(sender : UIButton){
         if Pcheck.currentTitle == "◻️" {
             Pcheck.setTitle("✅", forState: .Normal)
-            order1.updateValue("Pickle", forKey: pickle)
+            order1.updateValue("Pickle", forKey: "pickle")
+            print("dictionary ", order1)
         }
         else{
             Pcheck.setTitle("◻️", forState: .Normal)
-            order1.updateValue("0", forKey: pickle)
+            order1.updateValue("0", forKey: "pickle")
+            print("Dictionary ", order1)
         }
     }
     
     @IBAction func PlaceOrderTapped(sender : UIButton){
-       //set buttons to empty if not tapped
-       order1.updateValue("0", forKey: lettuce)
-       order1.updateValue("0", forKey: tomato)
-       order1.updateValue("0", forKey: onion)
-       order1.updateValue("0", forKey: pickle)
-       order1 = ["userID": userID, "burger": userburger, "heat": userheat, "cheese": usercheese, "bun": userbun, "lettuce": lettuce, "tomato": tomato, "onion": onion, "pickle": pickle]
+       //buttons initialized to empty so if button never tapped then values never changed
+       /*order1 = ["userID": userID, "burger": userburger, "heat": userheat, "cheese": usercheese, "bun": userbun, "lettuce": lettuce, "tomato": tomato, "onion": onion, "pickle": pickle]*/
         let order1Ref = DataService.dataservice._refFirebase.childByAppendingPath("orders").childByAutoId()
         order1Ref.setValue(order1)
         //do this so long as there was no error

@@ -15,6 +15,8 @@ class RecentOrdersVC: UIViewController, UITableViewDataSource, UITableViewDelega
     @IBOutlet var tableview: UITableView!
     var ords : [String] = []
     var orders : [[String]] = []
+    var i = 0
+    
     
     func getOrders(){
         //connects to database and captures the current data of orders
@@ -45,23 +47,14 @@ class RecentOrdersVC: UIViewController, UITableViewDataSource, UITableViewDelega
                     }
                 }
             
-            print("orders ", self.orders)
+            //print("orders ", self.orders)
+            //print("num orders ", self.orders.count)
             //loops through every order in array of users total orders
             for var object in self.orders
             {
-                //loops through every order to delete any empty listed choices
-                for i in 0 ..< 8
-                {
-                    if object[i].isEmpty == true
-                    {
-                        print(i)
-                        print("wrong")
-                        print("object ", object)
-                        object.removeAtIndex(i)
-                    }
-                }
                 //creates string to show in recent orders table
-                let c = object.joinWithSeparator(", ")
+                var c = object.joinWithSeparator(", ")
+                c = c.stringByReplacingOccurrencesOfString(", ,", withString: ",")
                 self.ords.append(c)
                 print(c)
             }
