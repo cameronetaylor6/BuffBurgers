@@ -19,6 +19,7 @@ app.post('/place', function(req, res){
 				var data = req.body;
 				console.log(data);
 				collection.insert(data);
+				db.close;
 		});
 });
 /*

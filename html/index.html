@@ -1,160 +1,165 @@
 <!doctype html>
 <html lang="en">
-<head>
-
-		<!--Jquery-->	
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-
-		<!-- Bootstrap -->	
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-		
-		<!-- CSS -->
-		<link rel="stylesheet" type="text/css" href="css/style.css">
-		
-		<!--Sweet Alert-->
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"></script>
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css">
-
-
-</head>
-	
-<body>	
-<script>
+    <head>
+        
+        <!--Jquery-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+        
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+            
+            <!-- CSS -->
+            <link rel="stylesheet" type="text/css" href="css/style.css">
+                
+                <!--Sweet Alert-->
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"></script>
+                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css">
+                    
+                    
+    </head>
     
-	function alert(){
-					var order = {
-					firstName: document.getElementById('first_name').value,
-					lastName: document.getElementById('last_name').value,
-					cuID: document.getElementById('ID').value,
-					burger: document.getElementById('burger').value,
-					temperature: document.getElementById('temp').value
-					}
-					//calls USD Bitcoin value from backend.
-					$.ajax({
-					url:'/place',
-					type:'POST',
-					data: order,
-					dataTpye: 'JSON',
-					success: function(){
-									console.log("ajax works");
-					},
-					error: function(){
-								console.log("ajax failed");
-					} 
-				}); swal("Success!", "Your order was placed", "success")
-	}
-
-	//Function tests if BuffBurgers form is completely filled out
-	function testFilledForm(){
-		var failed = false;
-		if(document.getElementById('first_name').value == "") failed = true;
-		if(document.getElementById('last_name').value == "") failed = true;
-		if(document.getElementById('ID').value == "") failed = true;
-		if(document.getElementById('burger').value == "") failed = true;
-		if(document.getElementById('temp').value == "") failed = true;
-		if(failed) console.log("Expected a fully filled form");
-	}
-
-	//Function tests if the customer selected too many cheeses
-	function testMultipleCheese(){
-		var checkedValue = null; 
-		var inputElements = document.getElementsByClassName('cheese');
-		var numberOfCheese = 0;
-		for(var i=0; inputElements[i]; ++i){
-      if(inputElements[i].checked){
-          checkedValue = inputElements[i].value;
-          numberOfCheese += 1;
-      }
-		}
-		if(numberOfCheese > 1) console.log("Expected only one cheese");
-	}
-</script>
-
-<img src="img/BuffBurgers.png" alt="BuffBurgers logo">
-
-		<!-- Form Collum -->
-		<div class="container">
-			<h1>Farrand Burger Order</h1>
-			<form class="form-horizontal" role="form" action="#">
-			<div class="col-md-6" id="left">
-					
-					<!-- Start of Form -->
-					<div class="form-group">
-						<label for="Order">Last 5 Digits of Student ID</label>
-						<input type="text" class="form-control" id="ID" placeholder="Enter Your Last 5 Digits of your CU SID">
-					</div>					
-				<div class="form-group">
-					<label>First Name</label>
-					<input type="text" class="form-control" id="first_name" placeholder="Enter Your First Name">
-				</div>
-				<div class="form-group">
-					<label>Last Name</label>
-					<input type="text" class="form-control" id="last_name" placeholder="Enter Your Last Name">
-				</div>
-			</div>
-			</form>
-			<div class="col-md-6" id="right">
-				<div class = "form-group">
-				<label for="burger_type">Type Of Burger?</label>
- 				 <select class="form-control" id="burger">
-    				<option>Hamburger</option>
-   					<option>Veggie Burger</option>
-    				<option>Daily Special</option>
- 				 </select>
- 				</div>
-				<div class = "form-group">
-				<label for="temperature">How Would You Like Your Burger Cooked?</label>
- 				 <select class="form-control" id="temp">
-    				<option>155&deg;</option>
-   					<option>160&deg;</option>
-    				<option>165&deg;</option>
-   					<option>170&deg;</option>
-   					<option>175&deg;</option>
- 				 </select>
- 				</div>
-				<div class="form-group">
-					<label for="cheese">Cheese?</label>
-					<div class="checkbox-inline">
-						<input class="cheese" type = "checkbox" value="cheddar" id="cheddar">Chedder
-					</div>
-					<div class="checkbox-inline">
-						<input class="cheese" type="checkbox" value="provolone">Provolone
-					</div>
-					<div class="checkbox-inline">
-						<input class="cheese" type="checkbox" value="swiss">Swiss
-					</div>
-					<div class="checkbox-inline">
-						<input class="cheese" type="checkbox" value="pepper jack">Pepper Jack
-					</div>
-				</div>
-				<div class="form-group">
-					<label for="toppings">Toppings?</label>
-					<div class="checkbox-inline">
-						<input type="checkbox" value="">Lettuce
-					</div>
-					<div class="checkbox-inline">
-						<input type="checkbox" value="">Tomato
-					</div>
-					<div class="checkbox-inline">
-						<input type="checkbox" value="">Onion
-					</div>
-					<div class="checkbox-inline">
-						<input type="checkbox" value="">Pickles
-					</div>
-				</div>
-				<div class = "form-group">
-				<label for="bun_type">Type of Bun?</label>
- 				 <select class="form-control" id="bun">
-    				<option>Regular Bun</option>
-   					<option>Lettuce Wrap</option>
-    				<option>Gluten Free Bun</option>
- 				 </select>
- 				</div>
-				<button type="submit" class="btn btn-default" onclick="alert(); testFilledForm(); testMultipleCheese();">Submit</button>
-			</div>
-		</div>
-			
-			
-</body>
+    <body>
+        <script>
+            
+            function alert(){
+                var cheeses = $('#cheese label.active input').val();
+                var lettuce = $('#lettuce input:checkbox:checked').val();
+                var tomato = $('#tomato input:checkbox:checked').val();
+                var onion = $('#onion input:checkbox:checked').val();
+                var pickle = $('#pickles input:checkbox:checked').val();
+                var order = {
+                    firstName: document.getElementById('first_name').value,
+                    lastName: document.getElementById('last_name').value,
+                    cuID: document.getElementById('ID').value,
+                    burger: document.getElementById('burger').value,
+                    temperature: document.getElementById('temp').value,
+                    cheese: cheeses,
+                    burgerBun: document.getElementById('bun').value,
+                    topping: [lettuce, tomato, onion, pickle],
+                }
+                //calls USD Bitcoin value from backend.
+                $.ajax({
+                       url:'/place',
+                       type:'POST',
+                       data: order,
+                       dataTpye: 'JSON',
+                       success: function(){
+                       console.log("ajax works");
+                       },
+                       error: function(){
+                       console.log("ajax failed");
+                       }
+                       }); swal("Success!", "Your order was placed", "success")
+            }
+        
+        //Function tests if BuffBurgers form is completely filled out
+        function testFilledForm(){
+            var failed = false;
+            if(document.getElementById('first_name').value == "") failed = true;
+            if(document.getElementById('last_name').value == "") failed = true;
+            if(document.getElementById('ID').value == "") failed = true;
+            if(document.getElementById('burger').value == "") failed = true;
+            if(document.getElementById('temp').value == "") failed = true;
+            if(failed) console.log("Expected a fully filled form");
+            if(failed) swal("Please fill out form completley", "error");
+            if(!failed) alert();
+        }
+        
+            </script>
+        
+        <img src="img/BuffBurgers.png" alt="BuffBurgers logo">
+            
+            <!-- Form Collum -->
+            <div class="container">
+                <h1>Farrand Burger Order</h1>
+                <form class="form-horizontal" role="form" action="#">
+                    <div class="col-md-6" id="left">
+                        
+                        <!-- Start of Form -->
+                        <div class="form-group">
+                            <label for="Order">Last 5 Digits of Student ID</label>
+                            <input type="text" class="form-control" id="ID" placeholder="Enter Your Last 5 Digits of your CU SID">
+                                </div>
+                        <div class="form-group">
+                            <label>First Name</label>
+                            <input type="text" class="form-control" id="first_name" placeholder="Enter Your First Name">
+                                </div>
+                        <div class="form-group">
+                            <label>Last Name</label>
+                            <input type="text" class="form-control" id="last_name" placeholder="Enter Your Last Name">
+                                </div>
+                    </div>
+                </form>
+                <div class="col-md-6" id="right">
+                    <div class = "form-group">
+                        <label for="burger_type">Type Of Burger?</label>
+                        <select class="form-control" id="burger">
+                            <option>Hamburger</option>
+                            <option>Veggie Burger</option>
+                            <option>Daily Special</option>
+                        </select>
+                    </div>
+                    <div class = "form-group">
+                        <label for="temperature">How Would You Like Your Burger Cooked?</label>
+                        <select class="form-control" id="temp">
+                            <option>155&deg;</option>
+                            <option>160&deg;</option>
+                            <option>165&deg;</option>
+                            <option>170&deg;</option>
+                            <option>175&deg;</option>
+                        </select>
+                    </div>
+                    <div class="btn-group" id="cheese" data-toggle="buttons">
+                        <label class="btn btn-default blue">
+                            <input type="radio" class="toggle" value="Ched"> Chedder
+                                </label>
+                        <label class="btn btn-default blue">
+                            <input type="radio" class="toggle" value="Prov"> Provolone
+                                </label>
+                        <label class="btn btn-default blue">
+                            <input type="radio" class="toggle" value="Swiss"> Swiss
+                                </label>
+                        <label class="btn btn-default blue">
+                            <input type="radio" class="toggle" value="Pep"> Pepper Jack
+                                </label>
+                    </div>
+                    <div class="form-group" id="lettuce" data-toggle="buttons">
+                        <label for="toppings">Toppings?</label>
+                        <div class="checkbox-inline">
+                            <input type="checkbox" class="toggle" value="Let">Lettuce
+                                </div>
+                    </div>
+                    
+                    <div class="form-group" id="tomato" data-toggle="buttons">
+                        <div class="checkbox-inline">
+                            <input type="checkbox" class="toggle" value="To">Tomato
+                                </div>
+                    </div>
+                    
+                    <div class="form-group" id="onion" data-toggle="buttons">
+                        <div class="checkbox-inline">
+                            <input type="checkbox" class="toggle" value="On">Onion
+                                </div>
+                    </div>
+                    
+                    <div class="form-group" id="pickles" data-toggle="buttons">
+                        <div class="checkbox-inline">
+                            <input type="checkbox" class="toggle" value="Pi">Pickles
+                                </div>
+                    </div>
+                    <div class = "form-group">
+                        <label for="bun_type">Type of Bun?</label>
+                        <select class="form-control" id="bun">
+                            <option>Regular Bun</option>
+                            <option>Lettuce Wrap</option>
+                            <option>Gluten Free Bun</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-default" onclick="testFilledForm();">Submit</button>
+                </div>
+            </div>
+            
+            
+    </body>
 </html>
