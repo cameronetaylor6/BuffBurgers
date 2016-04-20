@@ -7,10 +7,13 @@ var bodyParser = require('body-parser');
 app.use(bodyParser());
 var path = require('path');
 
+//app.use for getting css and js files.
 app.use(express.static(__dirname + '/public'));
 
+//mongodb URI
 var url = 'mongodb://heroku_swnsvj81:cdd371vcopbsed5o0uf8d6e8l0@ds013951.mlab.com:13951/heroku_swnsvj81';
 
+//posting to MongoDB
 app.post('/place', function(req, res){
 		MongoClient.connect(url, function(err, db){
 				assert.equal(null, err);
@@ -22,11 +25,8 @@ app.post('/place', function(req, res){
 				db.close;
 		});
 });
-/*
-MongoClient.connect(url, function(err, db) {
-		assert.equal(null, err);
-		console.log("Connected correctly to server.");
-});*/
+
+//get HTML files and set page.
 app.get('/', function (req, res){
 	fs.readFile('html/index.html', function(err, text){
 		res.setHeader('Context-Type', 'text/html');
@@ -34,6 +34,8 @@ app.get('/', function (req, res){
 	});
 	return;
 });
+
+//server on heroku. Or localhost:3000. whichever is used.
 var server = app.listen(process.env.PORT || 3000, function (){
 				var host = server.address().address;
 				var port = server.address().port;
