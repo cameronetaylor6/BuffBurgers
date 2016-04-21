@@ -17,6 +17,8 @@
   },
   "homepage": "https://github.com/cata5492/BuffBurgers#readme",
   "dependencies": {
+    "body-parser": "^1.15.0",
+    "express": "^4.13.4",
     "mongodb": "^2.1.10",
     "sqlite3": "^3.1.1"
   },
