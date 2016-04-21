@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10109" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10083"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Login -->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController title="Login " id="BYZ-38-t0r" customClass="ViewController" customModule="BuffBurgers" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Login " id="BYZ-38-t0r" customClass="LoginVC" customModule="BuffBurgers" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -40,7 +40,7 @@
                                     </mask>
                                 </variation>
                                 <connections>
-                                    <segue destination="0WC-hm-sgU" kind="showDetail" id="8Tq-Md-J1O"/>
+                                    <segue destination="0WC-hm-sgU" kind="show" identifier="logged_in" id="NEq-ac-ssM"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RsB-h7-hNp">
@@ -72,6 +72,9 @@
                                         <include reference="eSz-eO-aua"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <action selector="forgotpasswordTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="San-LA-Q9v"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lEQ-BU-KVE">
                                 <rect key="frame" x="30" y="300" width="540" height="40"/>
@@ -154,6 +157,7 @@
                                     </mask>
                                 </variation>
                                 <connections>
+                                    <action selector="signinTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ftP-vv-r97"/>
                                     <segue destination="0iH-bU-I7a" kind="showDetail" id="wuB-Se-jHY"/>
                                 </connections>
                             </button>
@@ -259,6 +263,10 @@
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" id="UmQ-ov-Uaw"/>
+                    <connections>
+                        <outlet property="txtPassword" destination="RsB-h7-hNp" id="VDN-nl-iJJ"/>
+                        <outlet property="txtUsername" destination="lEQ-BU-KVE" id="dZp-UZ-5iv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -267,7 +275,7 @@
         <!--Provider - Completed Orders-->
         <scene sceneID="ZkD-VZ-ixW">
             <objects>
-                <viewController title="Provider - Completed Orders" id="0R8-LD-e5K" sceneMemberID="viewController">
+                <viewController title="Provider - Completed Orders" id="0R8-LD-e5K" customClass="CompletedOrdersVC" customModule="BuffBurgers" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="VAB-fr-GbW"/>
                         <viewControllerLayoutGuide type="bottom" id="8Cg-Nf-7ah"/>
@@ -292,7 +300,7 @@
                                 <rect key="frame" x="30" y="104" width="540" height="416"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="completed1" rowHeight="389" id="DRf-KE-V1H" userLabel="completed">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="389" id="DRf-KE-V1H" userLabel="completed">
                                         <rect key="frame" x="0.0" y="28" width="540" height="389"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="DRf-KE-V1H" id="6ae-hz-rz9">
@@ -324,7 +332,8 @@
                                     </mask>
                                 </variation>
                                 <connections>
-                                    <segue destination="20A-6F-kIG" kind="showDetail" id="oou-OI-5np"/>
+                                    <action selector="pendingTapped:" destination="0R8-LD-e5K" eventType="touchUpInside" id="Zrf-CR-KIb"/>
+                                    <segue destination="20A-6F-kIG" kind="showDetail" identifier="pending" id="oou-OI-5np"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -343,6 +352,9 @@
                             <constraint firstItem="5Uu-OO-i7D" firstAttribute="top" secondItem="VAB-fr-GbW" secondAttribute="bottom" id="nez-sY-xol"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="completeOrderTable" destination="3mH-gL-d4h" id="rsX-vU-bbV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ap3-og-8xS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -567,12 +579,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zhu-WF-TSc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2046" y="1775"/>
+            <point key="canvasLocation" x="1698" y="1851"/>
         </scene>
         <!--Sign Up-->
         <scene sceneID="i3R-mq-zhC">
             <objects>
-                <viewController title="Sign Up" id="0iH-bU-I7a" sceneMemberID="viewController">
+                <viewController title="Sign Up" id="0iH-bU-I7a" customClass="SignupVC" customModule="BuffBurgers" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="46m-qx-0QW"/>
                         <viewControllerLayoutGuide type="bottom" id="0BY-ae-qVJ"/>
@@ -623,6 +635,7 @@
                                     </mask>
                                 </variation>
                                 <connections>
+                                    <action selector="signupTapped:" destination="0iH-bU-I7a" eventType="touchUpInside" id="nTm-Z0-Qaj"/>
                                     <segue destination="RId-GS-lI4" kind="showDetail" id="1mW-F4-Mx6"/>
                                 </connections>
                             </button>
@@ -661,6 +674,9 @@
                             <constraint firstItem="5RG-OT-FHD" firstAttribute="leading" secondItem="3mu-ee-mXE" secondAttribute="leading" constant="30" id="v4Z-lc-SZ4"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="txtUsername" destination="uwn-C3-cCY" id="yKi-Ae-D6m"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xvL-An-50g" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -669,7 +685,7 @@
         <!--Registration Confirmation-->
         <scene sceneID="Sq1-nH-RyO">
             <objects>
-                <viewController title="Registration Confirmation" id="RId-GS-lI4" sceneMemberID="viewController">
+                <viewController title="Registration Confirmation" id="RId-GS-lI4" customClass="SignUpConfirmVC" customModule="BuffBurgers" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="NfS-N0-Gcg"/>
                         <viewControllerLayoutGuide type="bottom" id="fyy-Rs-dwU"/>
@@ -838,7 +854,7 @@
         <!--Recent Orders-->
         <scene sceneID="Ca7-38-kIN">
             <objects>
-                <viewController title="Recent Orders" id="0WC-hm-sgU" sceneMemberID="viewController">
+                <viewController title="Recent Orders" id="0WC-hm-sgU" customClass="RecentOrdersVC" customModule="BuffBurgers" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="o2X-L3-5Qk"/>
                         <viewControllerLayoutGuide type="bottom" id="7cM-lk-O4g"/>
@@ -960,6 +976,9 @@
                             <constraint firstItem="CYw-4k-Fan" firstAttribute="top" secondItem="OZi-3Z-OLC" secondAttribute="bottom" constant="10" id="kUw-Fv-ppl"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableview" destination="1Cx-2W-4mW" id="y1g-Jx-DB5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oeD-Ai-plx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -968,7 +987,7 @@
         <!--Order Confirmation-->
         <scene sceneID="vA8-AO-VXr">
             <objects>
-                <viewController title="Order Confirmation" id="BZ4-7M-ftz" sceneMemberID="viewController">
+                <viewController title="Order Confirmation" id="BZ4-7M-ftz" customClass="OrderConfirmVC" customModule="BuffBurgers" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="WRf-wb-nyp"/>
                         <viewControllerLayoutGuide type="bottom" id="W6A-2c-EWc"/>
@@ -1177,7 +1196,7 @@ on the</string>
         <!--Provider - Pending Orders-->
         <scene sceneID="yYf-4G-0X3">
             <objects>
-                <viewController title="Provider - Pending Orders" id="20A-6F-kIG" sceneMemberID="viewController">
+                <viewController title="Provider - Pending Orders" id="20A-6F-kIG" customClass="PendingOrdersVC" customModule="BuffBurgers" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="wrq-Qq-uAK"/>
                         <viewControllerLayoutGuide type="bottom" id="Sfx-uA-8Fr"/>
@@ -1196,7 +1215,7 @@ on the</string>
                                 <rect key="frame" x="30" y="104" width="540" height="366"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="pending1" rowHeight="340" id="umw-hi-i7U" userLabel="pending">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="340" id="umw-hi-i7U" userLabel="pending">
                                         <rect key="frame" x="0.0" y="28" width="540" height="340"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="umw-hi-i7U" id="Fni-Af-C7T">
@@ -1227,6 +1246,9 @@ on the</string>
                                         <include reference="4iS-eS-D6o"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <action selector="allDoneTapped:" destination="20A-6F-kIG" eventType="touchUpInside" id="b6V-cG-joI"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap to Mark as Done" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rz5-MA-doa">
                                 <rect key="frame" x="216" y="63" width="168" height="21"/>
@@ -1256,7 +1278,8 @@ on the</string>
                                     </mask>
                                 </variation>
                                 <connections>
-                                    <segue destination="0R8-LD-e5K" kind="showDetail" id="ppQ-he-edz"/>
+                                    <action selector="completedOrdersTapped:" destination="20A-6F-kIG" eventType="touchUpInside" id="DAn-y6-MdV"/>
+                                    <segue destination="0R8-LD-e5K" kind="showDetail" identifier="completed" id="ppQ-he-edz"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -1278,6 +1301,9 @@ on the</string>
                             <constraint firstItem="PNB-Vs-B3F" firstAttribute="top" secondItem="rz5-MA-doa" secondAttribute="bottom" constant="20" id="w4v-6x-RIt"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="pendingOrderTable" destination="PNB-Vs-B3F" id="ygz-If-LHe"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lc2-44-W66" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1286,7 +1312,7 @@ on the</string>
         <!--Order-->
         <scene sceneID="jCc-TJ-dVS">
             <objects>
-                <viewController title="Order" id="x00-qL-dmh" sceneMemberID="viewController">
+                <viewController title="Order" id="x00-qL-dmh" customClass="OrderVC" customModule="BuffBurgers" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="nhE-nz-ptn"/>
                         <viewControllerLayoutGuide type="bottom" id="n6r-va-uTx"/>
@@ -1329,6 +1355,9 @@ on the</string>
                                 <variation key="widthClass=compact" misplaced="YES">
                                     <rect key="frame" x="127" y="443" width="46" height="30"/>
                                 </variation>
+                                <connections>
+                                    <action selector="TomatoTapped:" destination="x00-qL-dmh" eventType="touchUpInside" id="cFw-5P-K4u"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="245" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fv5-94-ast">
                                 <rect key="frame" x="375" y="500" width="30" height="30"/>
@@ -1342,6 +1371,9 @@ on the</string>
                                 <variation key="widthClass=compact" misplaced="YES">
                                     <rect key="frame" x="288" y="443" width="30" height="30"/>
                                 </variation>
+                                <connections>
+                                    <action selector="OnionTapped:" destination="x00-qL-dmh" eventType="touchUpInside" id="RZ8-do-fwO"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7bp-wd-WSu">
                                 <rect key="frame" x="532" y="500" width="30" height="30"/>
@@ -1355,6 +1387,9 @@ on the</string>
                                 <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
                                     <rect key="frame" x="215" y="443" width="30" height="30"/>
                                 </variation>
+                                <connections>
+                                    <action selector="PickleTapped:" destination="x00-qL-dmh" eventType="touchUpInside" id="oKe-lG-Tuq"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lettuce" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AEX-ae-Mtw">
                                 <rect key="frame" x="30" y="474" width="58" height="21"/>
@@ -1448,6 +1483,7 @@ on the</string>
                                     </mask>
                                 </variation>
                                 <connections>
+                                    <action selector="PlaceOrderTapped:" destination="x00-qL-dmh" eventType="touchUpInside" id="Y3d-pf-pPW"/>
                                     <segue destination="BZ4-7M-ftz" kind="showDetail" id="QYp-MB-bJ1"/>
                                 </connections>
                             </button>
@@ -1463,6 +1499,9 @@ on the</string>
                                 <variation key="widthClass=compact" misplaced="YES">
                                     <rect key="frame" x="44" y="443" width="30" height="30"/>
                                 </variation>
+                                <connections>
+                                    <action selector="LettuceTapped:" destination="x00-qL-dmh" eventType="touchUpInside" id="0oe-wO-Aum"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -1531,6 +1570,16 @@ on the</string>
                             <constraint firstItem="Yhd-gr-tGJ" firstAttribute="leading" secondItem="IdZ-v0-DpO" secondAttribute="trailing" id="zAz-JR-JmF"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="Bun" destination="usF-yC-CXZ" id="87y-AR-Ka9"/>
+                        <outlet property="Burger" destination="fKc-Yx-CB6" id="KRB-DG-5M5"/>
+                        <outlet property="Cheese" destination="GOp-zq-beX" id="Q7i-bH-Wlr"/>
+                        <outlet property="Heat" destination="LFl-Vc-H4i" id="wW7-id-ufh"/>
+                        <outlet property="Lcheck" destination="xKZ-QO-ppX" id="RiE-CQ-cck"/>
+                        <outlet property="Ocheck" destination="fv5-94-ast" id="SMM-rt-BhM"/>
+                        <outlet property="Pcheck" destination="7bp-wd-WSu" id="wkZ-Um-Pfs"/>
+                        <outlet property="Tcheck" destination="2vo-2q-p0q" id="29n-Jd-xUm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fwk-gN-skB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

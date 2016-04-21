@@ -1,0 +1,6 @@
+framework module Pods_BuffBurgers {
+  umbrella header "Pods-BuffBurgers-umbrella.h"
+
+  export *
+  module * { export * }
+}
