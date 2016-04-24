@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10109" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10083"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -40,7 +40,7 @@
                                     </mask>
                                 </variation>
                                 <connections>
-                                    <segue destination="0WC-hm-sgU" kind="show" identifier="logged_in" id="NEq-ac-ssM"/>
+                                    <action selector="signinTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="a4d-YS-hm3"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RsB-h7-hNp">
@@ -157,7 +157,6 @@
                                     </mask>
                                 </variation>
                                 <connections>
-                                    <action selector="signinTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ftP-vv-r97"/>
                                     <segue destination="0iH-bU-I7a" kind="showDetail" id="wuB-Se-jHY"/>
                                 </connections>
                             </button>
@@ -266,6 +265,8 @@
                     <connections>
                         <outlet property="txtPassword" destination="RsB-h7-hNp" id="VDN-nl-iJJ"/>
                         <outlet property="txtUsername" destination="lEQ-BU-KVE" id="dZp-UZ-5iv"/>
+                        <segue destination="0WC-hm-sgU" kind="show" identifier="logged_in" id="ldl-C1-7tU"/>
+                        <segue destination="20A-6F-kIG" kind="show" identifier="provider" id="aen-cw-8S3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -304,7 +305,7 @@
                                         <rect key="frame" x="0.0" y="28" width="540" height="389"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="DRf-KE-V1H" id="6ae-hz-rz9">
-                                            <rect key="frame" x="0.0" y="0.0" width="540" height="388.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="540" height="388"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -363,7 +364,7 @@
         <!--Account Management-->
         <scene sceneID="sbF-3t-mgn">
             <objects>
-                <viewController title="Account Management" id="6Pw-Ry-mEu" sceneMemberID="viewController">
+                <viewController title="Account Management" id="6Pw-Ry-mEu" customClass="AccountManageVC" customModule="BuffBurgers" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Ov5-Ig-YaR"/>
                         <viewControllerLayoutGuide type="bottom" id="qTS-Ei-jdq"/>
@@ -394,7 +395,7 @@
                                     </mask>
                                 </variation>
                                 <connections>
-                                    <segue destination="0WC-hm-sgU" kind="showDetail" id="BPQ-Ce-qH4"/>
+                                    <action selector="passwordchangedTapped:" destination="6Pw-Ry-mEu" eventType="touchUpInside" id="hN4-KS-nsW"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Confirm your password:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eWw-xA-gis">
@@ -446,14 +447,14 @@
                                     <constraint firstAttribute="width" id="aL2-Fu-UZG"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UgC-jw-XT2">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UgC-jw-XT2">
                                 <rect key="frame" x="300" y="110" width="0.0" height="37"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" id="oVY-1F-mVl"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4TI-KI-7bV">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4TI-KI-7bV">
                                 <rect key="frame" x="300" y="377" width="0.0" height="37"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -510,7 +511,7 @@
                                     </mask>
                                 </variation>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="showDetail" id="iq9-nj-OHB"/>
+                                    <action selector="signoutTapped:" destination="6Pw-Ry-mEu" eventType="touchUpInside" id="XIS-Hl-JKz"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Account Management" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kob-oU-RAV">
@@ -576,6 +577,13 @@
                         </variation>
                     </view>
                     <toolbarItems/>
+                    <connections>
+                        <outlet property="confirmPassword" destination="ry3-4p-GfY" id="1fT-fk-kam"/>
+                        <outlet property="newPassword" destination="rAk-Yg-juZ" id="gXT-l3-s05"/>
+                        <outlet property="tempPassword" destination="dkH-xS-RLQ" id="Axf-pp-2Ha"/>
+                        <segue destination="0WC-hm-sgU" kind="show" identifier="recent-segue" id="v7O-T3-JEa"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="login-segue" id="k90-dU-Jjb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zhu-WF-TSc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -765,7 +773,7 @@
                                     <constraint firstAttribute="width" id="X9y-OX-5DV"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pcn-eg-G9J">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pcn-eg-G9J">
                                 <rect key="frame" x="300" y="266" width="0.0" height="83"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -871,7 +879,7 @@
                                         <rect key="frame" x="0.0" y="28" width="540" height="17"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="yp5-eZ-SZ3" id="1d1-l8-2GB">
-                                            <rect key="frame" x="0.0" y="0.0" width="540" height="16.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="540" height="16"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -879,7 +887,7 @@
                                         <rect key="frame" x="0.0" y="45" width="540" height="132"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5vS-kk-i5K" id="qYh-wJ-VHw">
-                                            <rect key="frame" x="0.0" y="0.0" width="540" height="131.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="540" height="131"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -887,7 +895,7 @@
                                         <rect key="frame" x="0.0" y="177" width="540" height="155"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="UdL-YJ-uRN" id="uyO-lL-czT">
-                                            <rect key="frame" x="0.0" y="0.0" width="540" height="154.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="540" height="154"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -1219,7 +1227,7 @@ on the</string>
                                         <rect key="frame" x="0.0" y="28" width="540" height="340"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="umw-hi-i7U" id="Fni-Af-C7T">
-                                            <rect key="frame" x="0.0" y="0.0" width="540" height="339.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="540" height="339"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -1331,7 +1339,7 @@ on the</string>
                                 <rect key="frame" x="30" y="73" width="540" height="70"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </pickerView>
-                            <pickerView tag="2" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LFl-Vc-H4i" userLabel="Heat">
+                            <pickerView tag="2" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LFl-Vc-H4i" userLabel="Heat">
                                 <rect key="frame" x="30" y="183" width="540" height="71"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </pickerView>
@@ -1422,7 +1430,7 @@ on the</string>
                                     <constraint firstAttribute="height" id="qrW-Fk-rmA"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ykV-fl-rXx">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ykV-fl-rXx">
                                 <rect key="frame" x="257" y="300" width="110" height="0.0"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -1587,8 +1595,9 @@ on the</string>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="NEq-ac-ssM"/>
+        <segue reference="aen-cw-8S3"/>
         <segue reference="gq6-0H-8rv"/>
-        <segue reference="EaO-Tn-SKB"/>
+        <segue reference="v7O-T3-JEa"/>
+        <segue reference="OMa-Ff-Gyi"/>
     </inferredMetricsTieBreakers>
 </document>

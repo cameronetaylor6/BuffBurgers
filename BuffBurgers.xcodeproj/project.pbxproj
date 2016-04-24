@@ -15,10 +15,11 @@
 		D41156851CC873CB00E2CFE9 /* CompletedOrdersVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D41156801CC873CB00E2CFE9 /* CompletedOrdersVC.swift */; };
 		D41156861CC873CB00E2CFE9 /* RecentOrdersVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D41156811CC873CB00E2CFE9 /* RecentOrdersVC.swift */; };
 		D41156871CC873CB00E2CFE9 /* FirebaseData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D41156821CC873CB00E2CFE9 /* FirebaseData.swift */; };
-		D411568C1CC8740E00E2CFE9 /* SignUpConfirmVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D41156881CC8740E00E2CFE9 /* SignUpConfirmVC.swift */; };
 		D411568D1CC8740E00E2CFE9 /* OrderConfirmVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D41156891CC8740E00E2CFE9 /* OrderConfirmVC.swift */; };
-		D411568E1CC8740E00E2CFE9 /* SignupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D411568A1CC8740E00E2CFE9 /* SignupVC.swift */; };
 		D411568F1CC8740E00E2CFE9 /* OrderVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D411568B1CC8740E00E2CFE9 /* OrderVC.swift */; };
+		D44866831CCD5CB300028F87 /* AccountManageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44866821CCD5CB300028F87 /* AccountManageVC.swift */; };
+		D44866851CCD5F2B00028F87 /* SignUpConfirmVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44866841CCD5F2B00028F87 /* SignUpConfirmVC.swift */; };
+		D44866871CCD5F7400028F87 /* SignupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44866861CCD5F7400028F87 /* SignupVC.swift */; };
 		E2156AA01C6E417700E84F7F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2156A9F1C6E417700E84F7F /* AppDelegate.swift */; };
 		E2156AA51C6E417700E84F7F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2156AA31C6E417700E84F7F /* Main.storyboard */; };
 		E2156AA71C6E417700E84F7F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2156AA61C6E417700E84F7F /* Assets.xcassets */; };
@@ -59,10 +60,11 @@
 		D41156801CC873CB00E2CFE9 /* CompletedOrdersVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompletedOrdersVC.swift; sourceTree = "<group>"; };
 		D41156811CC873CB00E2CFE9 /* RecentOrdersVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecentOrdersVC.swift; sourceTree = "<group>"; };
 		D41156821CC873CB00E2CFE9 /* FirebaseData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseData.swift; sourceTree = "<group>"; };
-		D41156881CC8740E00E2CFE9 /* SignUpConfirmVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpConfirmVC.swift; sourceTree = "<group>"; };
 		D41156891CC8740E00E2CFE9 /* OrderConfirmVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderConfirmVC.swift; sourceTree = "<group>"; };
-		D411568A1CC8740E00E2CFE9 /* SignupVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupVC.swift; sourceTree = "<group>"; };
 		D411568B1CC8740E00E2CFE9 /* OrderVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderVC.swift; sourceTree = "<group>"; };
+		D44866821CCD5CB300028F87 /* AccountManageVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountManageVC.swift; sourceTree = "<group>"; };
+		D44866841CCD5F2B00028F87 /* SignUpConfirmVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SignUpConfirmVC.swift; path = ../../../ioscrap/BuffBurgers/BuffBurgers/SignUpConfirmVC.swift; sourceTree = "<group>"; };
+		D44866861CCD5F7400028F87 /* SignupVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupVC.swift; sourceTree = "<group>"; };
 		E2156A9C1C6E417700E84F7F /* BuffBurgers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BuffBurgers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2156A9F1C6E417700E84F7F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E2156AA41C6E417700E84F7F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -160,9 +162,10 @@
 				D41156811CC873CB00E2CFE9 /* RecentOrdersVC.swift */,
 				D41156821CC873CB00E2CFE9 /* FirebaseData.swift */,
 				E2156AA31C6E417700E84F7F /* Main.storyboard */,
-				D41156881CC8740E00E2CFE9 /* SignUpConfirmVC.swift */,
+				D44866841CCD5F2B00028F87 /* SignUpConfirmVC.swift */,
 				D41156891CC8740E00E2CFE9 /* OrderConfirmVC.swift */,
-				D411568A1CC8740E00E2CFE9 /* SignupVC.swift */,
+				D44866821CCD5CB300028F87 /* AccountManageVC.swift */,
+				D44866861CCD5F7400028F87 /* SignupVC.swift */,
 				D411568B1CC8740E00E2CFE9 /* OrderVC.swift */,
 				E2156AA61C6E417700E84F7F /* Assets.xcassets */,
 				E2156AA81C6E417700E84F7F /* LaunchScreen.storyboard */,
@@ -455,14 +458,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				D41156871CC873CB00E2CFE9 /* FirebaseData.swift in Sources */,
-				D411568C1CC8740E00E2CFE9 /* SignUpConfirmVC.swift in Sources */,
+				D44866851CCD5F2B00028F87 /* SignUpConfirmVC.swift in Sources */,
 				D411568D1CC8740E00E2CFE9 /* OrderConfirmVC.swift in Sources */,
-				D411568E1CC8740E00E2CFE9 /* SignupVC.swift in Sources */,
 				D41156831CC873CB00E2CFE9 /* LoginVC.swift in Sources */,
 				D41156841CC873CB00E2CFE9 /* PendingOrdersVC.swift in Sources */,
 				E2156AA01C6E417700E84F7F /* AppDelegate.swift in Sources */,
 				D41156851CC873CB00E2CFE9 /* CompletedOrdersVC.swift in Sources */,
+				D44866831CCD5CB300028F87 /* AccountManageVC.swift in Sources */,
 				D41156861CC873CB00E2CFE9 /* RecentOrdersVC.swift in Sources */,
+				D44866871CCD5F7400028F87 /* SignupVC.swift in Sources */,
 				D411568F1CC8740E00E2CFE9 /* OrderVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
