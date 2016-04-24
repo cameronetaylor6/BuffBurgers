@@ -49,7 +49,7 @@
                                     <constraint firstAttribute="height" constant="40" id="Z27-eX-qg7"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
-                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
                                 <variation key="heightClass=regular-widthClass=regular">
                                     <mask key="constraints">
                                         <include reference="Z27-eX-qg7"/>
@@ -82,7 +82,7 @@
                                     <constraint firstAttribute="height" constant="40" id="buK-30-8YO"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
-                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" enablesReturnKeyAutomatically="YES"/>
                                 <variation key="heightClass=regular-widthClass=regular">
                                     <mask key="constraints">
                                         <include reference="buK-30-8YO"/>
@@ -410,7 +410,7 @@
                                     <constraint firstAttribute="height" constant="40" id="F6K-XF-nzC"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
                             </textField>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ySH-am-dBi">
                                 <rect key="frame" x="300" y="320" width="0.0" height="36"/>
@@ -479,7 +479,7 @@
                                     <constraint firstAttribute="height" constant="40" id="qd3-Ko-KY3"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ry3-4p-GfY">
                                 <rect key="frame" x="30" y="414" width="540" height="40"/>
@@ -487,7 +487,7 @@
                                     <constraint firstAttribute="height" constant="40" id="KPB-91-EWl"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sdO-Fs-9qf">
                                 <rect key="frame" x="30" y="540" width="540" height="40"/>
@@ -619,7 +619,7 @@
                                     <constraint firstAttribute="height" constant="40" id="s33-6Z-67G"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" enablesReturnKeyAutomatically="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5RG-OT-FHD">
                                 <rect key="frame" x="30" y="352" width="540" height="40"/>
@@ -1595,9 +1595,9 @@ on the</string>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="aen-cw-8S3"/>
-        <segue reference="gq6-0H-8rv"/>
-        <segue reference="v7O-T3-JEa"/>
         <segue reference="OMa-Ff-Gyi"/>
+        <segue reference="gq6-0H-8rv"/>
+        <segue reference="ldl-C1-7tU"/>
+        <segue reference="aen-cw-8S3"/>
     </inferredMetricsTieBreakers>
 </document>
