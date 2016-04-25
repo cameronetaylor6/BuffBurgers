@@ -1579,9 +1579,9 @@ on the</string>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="EaO-Tn-SKB"/>
-        <segue reference="ldl-C1-7tU"/>
+        <segue reference="aen-cw-8S3"/>
         <segue reference="gq6-0H-8rv"/>
-        <segue reference="oou-OI-5np"/>
+        <segue reference="ldl-C1-7tU"/>
+        <segue reference="EaO-Tn-SKB"/>
     </inferredMetricsTieBreakers>
 </document>

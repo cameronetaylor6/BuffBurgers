@@ -9,6 +9,8 @@
 
 import UIKit
 import Firebase
+import Foundation
+
 
 class RecentOrdersVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
@@ -26,6 +28,7 @@ class RecentOrdersVC: UIViewController, UITableViewDataSource, UITableViewDelega
     var onion : String = "No Onion"
     var pickle : String = "No Pickle"
     
+    lazy var keys : [String] = [userID, self.status, self.userburger, self.userheat, self.usercheese, self.userbun, self.lettuce, self.tomato, self.onion, self.pickle]
     lazy var order1 : [String:String] = ["userID": userID, "status": self.status, "burger": self.userburger, "heat": self.userheat, "cheese": self.usercheese, "bun": self.userbun, "lettuce": self.lettuce, "tomato": self.tomato, "onion": self.onion, "pickle": self.pickle]
     
     func getOrders(){
@@ -97,8 +100,10 @@ class RecentOrdersVC: UIViewController, UITableViewDataSource, UITableViewDelega
         let indexPath = tableView.indexPathForSelectedRow!;
         let currentCell = tableView.cellForRowAtIndexPath(indexPath) as UITableViewCell!;
         var ordStr = currentCell.textLabel?.text
-        var ordArr = ordStr?.componentsSeparatedByString(" , ")
-        print(ordArr)
+        var ordArr = Array(arrayLiteral: ordStr?.componentsSeparatedByString(", "))
+                
+        
+        print("ORDARRAY ",ordArr)
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
