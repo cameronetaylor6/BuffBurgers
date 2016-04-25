@@ -31,8 +31,22 @@ img {
 	margin-left: auto; 
 	margin-right: auto;
 	width: 41%;
-	padding-bottom:3%;
+	padding-bottom:5%;
 	padding-top:3%;
+}
+
+.toppings {
+	float:left;
+	padding-right:7px;
+	padding-bottom:7px;
+}
+
+#buns {
+	clear:both;
+}
+
+#lettuce2 {
+	padding-top:8px;
 }
 
 .btn-default {
