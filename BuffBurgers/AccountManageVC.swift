@@ -16,6 +16,11 @@ class AccountManageVC: UIViewController {
     @IBOutlet var confirmPassword : UITextField!
     let ref = Firebase(url: "https://buffburgers.firebaseio.com")
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.hideKeyboardWhenTappedAround()
+    }
+    
     @IBAction func passwordchangedTapped(sender : UIButton){
         print(userID,newPassword,confirmPassword)
         

@@ -10,6 +10,7 @@
 		12AE8337C3B7D15CA3AEA55D /* Pods_BuffBurgers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26CA117F5969674AB45E3F62 /* Pods_BuffBurgers.framework */; };
 		171AAE5998CB8D9584C4A25B /* Pods_BuffBurgersTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5549037FE6082E02CDF29DC9 /* Pods_BuffBurgersTests.framework */; };
 		40CF8D400E3C057F56D1D0EE /* Pods_BuffBurgersUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1836F9BA5F9649F299DF014D /* Pods_BuffBurgersUITests.framework */; };
+		B0E6E6231CCE98C20094BEA2 /* SignupConfirmVCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E6E6221CCE98C20094BEA2 /* SignupConfirmVCViewController.swift */; };
 		D41156831CC873CB00E2CFE9 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D411567E1CC873CB00E2CFE9 /* LoginVC.swift */; };
 		D41156841CC873CB00E2CFE9 /* PendingOrdersVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D411567F1CC873CB00E2CFE9 /* PendingOrdersVC.swift */; };
 		D41156851CC873CB00E2CFE9 /* CompletedOrdersVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D41156801CC873CB00E2CFE9 /* CompletedOrdersVC.swift */; };
@@ -54,6 +55,7 @@
 		59B38E05076BCA85D033FBAB /* Pods-BuffBurgers.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BuffBurgers.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BuffBurgers/Pods-BuffBurgers.debug.xcconfig"; sourceTree = "<group>"; };
 		951D02854D5AA187623DF375 /* Pods-BuffBurgersUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BuffBurgersUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BuffBurgersUITests/Pods-BuffBurgersUITests.release.xcconfig"; sourceTree = "<group>"; };
 		A07BED051D791CD60899BC67 /* Pods-BuffBurgersTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BuffBurgersTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BuffBurgersTests/Pods-BuffBurgersTests.debug.xcconfig"; sourceTree = "<group>"; };
+		B0E6E6221CCE98C20094BEA2 /* SignupConfirmVCViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupConfirmVCViewController.swift; sourceTree = "<group>"; };
 		D411567E1CC873CB00E2CFE9 /* LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		D411567F1CC873CB00E2CFE9 /* PendingOrdersVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PendingOrdersVC.swift; sourceTree = "<group>"; };
 		D41156801CC873CB00E2CFE9 /* CompletedOrdersVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompletedOrdersVC.swift; sourceTree = "<group>"; };
@@ -160,6 +162,7 @@
 				D41156811CC873CB00E2CFE9 /* RecentOrdersVC.swift */,
 				D41156821CC873CB00E2CFE9 /* FirebaseData.swift */,
 				E2156AA31C6E417700E84F7F /* Main.storyboard */,
+				B0E6E6221CCE98C20094BEA2 /* SignupConfirmVCViewController.swift */,
 				D41156891CC8740E00E2CFE9 /* OrderConfirmVC.swift */,
 				D44866821CCD5CB300028F87 /* AccountManageVC.swift */,
 				D44866861CCD5F7400028F87 /* SignupVC.swift */,
@@ -455,6 +458,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D41156871CC873CB00E2CFE9 /* FirebaseData.swift in Sources */,
+				B0E6E6231CCE98C20094BEA2 /* SignupConfirmVCViewController.swift in Sources */,
 				D411568D1CC8740E00E2CFE9 /* OrderConfirmVC.swift in Sources */,
 				D41156831CC873CB00E2CFE9 /* LoginVC.swift in Sources */,
 				D41156841CC873CB00E2CFE9 /* PendingOrdersVC.swift in Sources */,
