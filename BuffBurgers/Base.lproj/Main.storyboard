@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10109" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10083"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -91,6 +91,9 @@
                             </textField>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ScI-5A-GPV">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="heightClass=regular-widthClass=compact" ambiguous="YES" misplaced="YES">
+                                    <rect key="frame" x="30" y="140" width="340" height="320"/>
+                                </variation>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fhP-h2-G2s">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
@@ -186,7 +189,6 @@
                             <constraint firstAttribute="trailing" secondItem="ScI-5A-GPV" secondAttribute="trailing" constant="30" id="ZuF-1O-8OA"/>
                             <constraint firstItem="C21-Fb-djb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bKZ-BK-cbw"/>
                             <constraint firstItem="HCf-EL-lx3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bsa-RK-cKf"/>
-                            <constraint firstItem="ScI-5A-GPV" firstAttribute="top" secondItem="BqP-lv-29K" secondAttribute="bottom" constant="40" id="fxl-ET-7ns"/>
                             <constraint firstItem="BqP-lv-29K" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hRu-vn-z6L"/>
                             <constraint firstItem="C21-Fb-djb" firstAttribute="top" secondItem="9gH-Y6-pxf" secondAttribute="bottom" constant="20" id="hhn-un-6cB">
                                 <variation key="heightClass=compact" constant="10"/>
@@ -215,7 +217,6 @@
                                 <exclude reference="rjz-Sf-x0V"/>
                                 <exclude reference="XjS-ft-XE6"/>
                                 <exclude reference="ZuF-1O-8OA"/>
-                                <exclude reference="fxl-ET-7ns"/>
                                 <exclude reference="7Wc-OU-ImM"/>
                                 <exclude reference="iBS-6g-iTL"/>
                                 <exclude reference="91N-nr-4e4"/>
@@ -246,7 +247,6 @@
                             <mask key="constraints">
                                 <include reference="XjS-ft-XE6"/>
                                 <include reference="ZuF-1O-8OA"/>
-                                <include reference="fxl-ET-7ns"/>
                                 <include reference="WG2-G5-se3"/>
                             </mask>
                         </variation>
@@ -305,7 +305,7 @@
                                         <rect key="frame" x="0.0" y="28" width="540" height="389"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="DRf-KE-V1H" id="6ae-hz-rz9">
-                                            <rect key="frame" x="0.0" y="0.0" width="540" height="388"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="540" height="388.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -447,14 +447,14 @@
                                     <constraint firstAttribute="width" id="aL2-Fu-UZG"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UgC-jw-XT2">
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UgC-jw-XT2">
                                 <rect key="frame" x="300" y="110" width="0.0" height="37"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" id="oVY-1F-mVl"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4TI-KI-7bV">
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4TI-KI-7bV">
                                 <rect key="frame" x="300" y="377" width="0.0" height="37"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -773,7 +773,7 @@
                                     <constraint firstAttribute="width" id="X9y-OX-5DV"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pcn-eg-G9J">
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pcn-eg-G9J">
                                 <rect key="frame" x="300" y="266" width="0.0" height="83"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -879,7 +879,7 @@
                                         <rect key="frame" x="0.0" y="28" width="540" height="17"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="yp5-eZ-SZ3" id="1d1-l8-2GB">
-                                            <rect key="frame" x="0.0" y="0.0" width="540" height="16"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="540" height="16.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -944,7 +944,7 @@
                                     </mask>
                                 </variation>
                                 <connections>
-                                    <segue destination="x00-qL-dmh" kind="showDetail" id="EaO-Tn-SKB"/>
+                                    <segue destination="x00-qL-dmh" kind="showDetail" identifier="" id="EaO-Tn-SKB"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -1211,7 +1211,7 @@ on the</string>
                                         <rect key="frame" x="0.0" y="28" width="540" height="340"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="umw-hi-i7U" id="Fni-Af-C7T">
-                                            <rect key="frame" x="0.0" y="0.0" width="540" height="339"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="540" height="339.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -1323,7 +1323,7 @@ on the</string>
                                 <rect key="frame" x="30" y="73" width="540" height="70"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </pickerView>
-                            <pickerView tag="2" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LFl-Vc-H4i" userLabel="Heat">
+                            <pickerView tag="2" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LFl-Vc-H4i" userLabel="Heat">
                                 <rect key="frame" x="30" y="183" width="540" height="71"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </pickerView>
@@ -1414,7 +1414,7 @@ on the</string>
                                     <constraint firstAttribute="height" id="qrW-Fk-rmA"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ykV-fl-rXx">
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ykV-fl-rXx">
                                 <rect key="frame" x="257" y="300" width="110" height="0.0"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -1476,7 +1476,7 @@ on the</string>
                                 </variation>
                                 <connections>
                                     <action selector="PlaceOrderTapped:" destination="x00-qL-dmh" eventType="touchUpInside" id="Y3d-pf-pPW"/>
-                                    <segue destination="BZ4-7M-ftz" kind="showDetail" id="QYp-MB-bJ1"/>
+                                    <segue destination="BZ4-7M-ftz" kind="showDetail" identifier="order_confirmed" id="QYp-MB-bJ1"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="229" verticalCompressionResistancePriority="749" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xKZ-QO-ppX">
@@ -1581,7 +1581,7 @@ on the</string>
     <inferredMetricsTieBreakers>
         <segue reference="aen-cw-8S3"/>
         <segue reference="gq6-0H-8rv"/>
-        <segue reference="ldl-C1-7tU"/>
-        <segue reference="EaO-Tn-SKB"/>
+        <segue reference="bGm-dp-qqW"/>
+        <segue reference="OMa-Ff-Gyi"/>
     </inferredMetricsTieBreakers>
 </document>

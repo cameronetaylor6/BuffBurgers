@@ -7,8 +7,19 @@
 
 import UIKit
 import Firebase
+extension UIViewController {
+    func hideKeyboardWhenTappedAround() {
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
+        view.addGestureRecognizer(tap)
+    }
+    
+    func dismissKeyboard() {
+        view.endEditing(true)
+    }
+}
 
 var userID : String = ""
+
 
 class LoginVC: UIViewController,UITextFieldDelegate {
     
@@ -22,6 +33,8 @@ class LoginVC: UIViewController,UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.hideKeyboardWhenTappedAround()
+        
         
         // Do any additional setup after loading the view.
     }
@@ -30,6 +43,7 @@ class LoginVC: UIViewController,UITextFieldDelegate {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
     
     
     
